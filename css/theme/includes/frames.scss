@@ -1,0 +1,35 @@
+.framed {
+  border: $framed-width solid white;
+}
+
+.framed-yellow {
+  border: $framed-width solid $yellow-color;
+}
+
+.framed-red {
+  border: $framed-width solid $red-color;
+}
+
+.framed-green {
+  border: $framed-width solid $green-color;
+}
+
+pre.code-wrapper {
+  border: 2px solid #ffffff17;
+
+  &.framed {
+    border: $framed-width solid white;
+  }
+
+  &.framed-yellow {
+    border: $framed-width solid $yellow-color;
+  }
+
+  &.framed-red {
+    border: $framed-width solid $red-color;
+  }
+
+  &.framed-green {
+    border: $framed-width solid $green-color;
+  }
+}

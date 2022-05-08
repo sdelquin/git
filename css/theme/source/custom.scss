@@ -1,0 +1,22 @@
+// Custom Theme based on Black theme by By Hakim El Hattab, http://hakim.se
+
+// Default mixins and settings
+@import "../template/mixins";
+@import "../template/settings";
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#222);
+
+// Custom imports
+@import "../includes/constants";
+@import "../includes/fonts";
+@import "../includes/override";
+@import "../includes/content";
+@import "../includes/header";
+@import "../includes/footer";
+@import "../includes/layout";
+@import "../includes/sizes";
+@import "../includes/frames";
+
+// Theme template
+@import "../template/theme";

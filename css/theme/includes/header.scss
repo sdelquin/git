@@ -1,0 +1,23 @@
+#header-left {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+#header-right {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+
+  img.logo {
+    width: 5rem;
+    margin: 0;
+  }
+
+  div.label {
+    padding-left: 0.5rem;
+  }
+}

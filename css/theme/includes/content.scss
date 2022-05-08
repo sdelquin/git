@@ -1,0 +1,54 @@
+.yellow {
+  color: $yellow-color;
+}
+
+.red {
+  color: $red-color;
+}
+
+.green {
+  color: $green-color;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.centering {
+  text-align: center;
+}
+
+.left-just {
+  text-align: left;
+}
+
+.right-just {
+  text-align: right;
+}
+
+.reveal ul {
+  &.blank {
+    list-style-type: none;
+  }
+  &.check {
+    list-style-type: none;
+    li:before {
+      content: "✅";
+      margin-right: 1rem;
+    }
+  }
+  &.cross {
+    list-style-type: none;
+    li:before {
+      content: "❌";
+      margin-right: 1rem;
+    }
+  }
+  &.dollar {
+    list-style-type: none;
+    li:before {
+      content: "$";
+      margin-right: 1rem;
+    }
+  }
+}

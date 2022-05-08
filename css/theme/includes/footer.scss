@@ -1,0 +1,17 @@
+#footer-left {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  font-size: $footer-font-size;
+  display: flex;
+  align-items: center;
+
+  img.logo {
+    width: 2rem;
+    margin: 0;
+  }
+
+  div.label {
+    padding-left: 0.5rem;
+  }
+}
