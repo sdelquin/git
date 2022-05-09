@@ -382,7 +382,7 @@
             >
           </p>
           <pre>
-            <code class="console" data-trim data-noescape data-line-numbers="1|2|3-4">
+            <code class="console nonu" data-trim data-noescape data-line-numbers="1|2|3-4">
               $ git clone https://github.com/sdelquin/work.git
               $ cd work
               $ ls
@@ -403,7 +403,7 @@
             <code>git <span class="red">status</span></code>
           </h3>
           <pre>
-              <code class="console" data-trim data-noescape data-line-numbers="1|2|3|5">
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1|2|3|5">
                 $ git status
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -419,7 +419,7 @@
           </h3>
           <p>Modificamos <code>README.md</code> 👷🏻‍♀️</p>
           <pre>
-            <code class="console" data-trim data-noescape data-line-numbers="1-3|5-8|10">
+            <code class="console nonu" data-trim data-noescape data-line-numbers="1-3|5-8|10">
               $ git status
               On branch main
               Your branch is up to date with 'origin/main'.
@@ -427,7 +427,7 @@
               Changes not staged for commit:
                 (use "git add [file]..." to update what will be committed)
                 (use "git restore [file]..." to discard changes in working directory)
-                modified:   README.md
+                <span class="red">modified:   README.md</span>
               
               no changes added to commit (use "git add" and/or "git commit -a")
             </code>
@@ -456,14 +456,14 @@
             </code>
           </pre>
           <pre class="fragment">
-            <code class="console" data-trim data-noescape data-line-numbers="1-3|5-7">
+            <code class="console nonu" data-trim data-noescape data-line-numbers="1-3|5-7">
             $ git status
             On branch main
             Your branch is up to date with 'origin/main'.
 
             Changes to be committed:
               (use "git restore --staged [file]..." to unstage)
-              modified:   README.md
+              <span class="red">modified:   README.md</span>
             </code>
           </pre>
         </section>
@@ -493,7 +493,7 @@
             </code>
           </pre>
           <pre class="fragment">
-            <code class="console" data-trim data-noescape data-line-numbers="1|2|3-4|6">
+            <code class="console nonu" data-trim data-noescape data-line-numbers="1|2|3-4|6">
               $ git status
               On branch main
               Your branch is ahead of 'origin/main' by 1 commit.
@@ -562,7 +562,7 @@
                 Changes not staged for commit:
                   (use "git add [file]..." to update what will be committed)
                   (use "git restore [file]..." to discard changes in working directory)
-                  modified:   README.md
+                  <span class="red">modified:   README.md</span>
                 
                 no changes added to commit (use "git add" and/or "git commit -a")
               </code>
@@ -603,7 +603,7 @@
 
                 Changes to be committed:
                   (use "git restore --staged [file]..." to unstage)
-                  modified:   README.md
+                  <span class="red">modified:   README.md</span>
               </code>
             </pre>
             <div class="fragment" data-fragment-index="0">
@@ -709,10 +709,10 @@
             </pre>
             <pre>
               <code class="console s90" data-trim data-noescape>
-                $ git status
+                $ git branch
                   dev
                   feat
-                * main
+                * <span class="green">main</span>
               </code>
             </pre>
           </div>
@@ -729,8 +729,8 @@
             </pre>
             <pre>
               <code class="console s90" data-trim data-noescape>
-                $ git status
-                * main
+                $ git branch
+                * <span class="green">main</span>
               </code>
             </pre>
           </div>
@@ -782,7 +782,7 @@
                 <pre>
                   <code class="console" data-trim data-noescape>
                     $ git branch
-                    * main
+                    * <span class="green">main</span>
                   </code>
                 </pre>
               </div>
@@ -805,7 +805,7 @@
                 <pre>
                   <code class="console" data-trim data-noescape>
                     $ git branch
-                    * blue
+                    * <span class="green">blue</span>
                       main
                   </code>
                 </pre>
@@ -828,7 +828,7 @@
                     $ git branch
                       blue
                       main
-                    * red
+                    * <span class="green">red</span>
                   </code>
                 </pre>
               </div>
@@ -855,7 +855,7 @@
                   <code class="console" data-trim data-noescape>
                     $ git status
                       blue
-                    * main
+                    * <span class="green">main</span>
                   </code>
                 </pre>
                 <pre>
@@ -869,7 +869,7 @@
                     $ git status
                       blue
                       main
-                    * red
+                    * <span class="green">red</span>
                   </code>
                 </pre>
               </div>
@@ -899,7 +899,7 @@
                 <a href="https://opensource.com/article/22/4/git-branches"
                   >https://opensource.com/article/22/4/git-branches</a
                 >
-              </p>
+              </div>
             </div>
           </div>
         </section>
@@ -917,7 +917,7 @@
           </h3>
           <div class="r-stack">
             <pre>
-              <code class="console" data-trim data-noescape  data-line-numbers="1|2-3|4-5|6-7|8|9">
+              <code class="console nonu" data-trim data-noescape  data-line-numbers="1|2-3|4-5|6-7|8|9">
                 $ git push
                 Enumerating objects: 5, done.
                 Counting objects: 100% (5/5), done.
@@ -979,8 +979,8 @@
           </h3>
           <div class="r-stack">
             <div>
-              <pre class="fragment semi-fade-out" data-fragment-index="0">
-                <code class="console"data-trim data-noescape>
+              <pre>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1|3-6|7-8|9">
                   $ git push -u origin dev
                   Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
                   remote:
@@ -992,10 +992,7 @@
                   Branch 'dev' set up to track remote branch 'dev' from 'origin'.
                 </code>
               </pre>
-              <p
-                class="fragment semi-fade-out current-visible"
-                data-fragment-index="0"
-              >
+              <p class="alpha25">
                 <code>-u</code> <span class="yellow">$\Leftrightarrow$</span>
                 <code>--set-upstream</code>
               </p>
@@ -1026,15 +1023,15 @@
           </div>
           <div class="blk-r80 fragment">
             <pre>
-              <code class="console" data-trim data-noescape data-line-numbers="1|3-5|7|9-12">
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1|3-5|7|9-12">
                 $ git switch dev
-
+                 
                 $ vi README.md  # modificación
                 $ git add .
                 $ git commit -m "New notes"
-
+                  
                 $ git switch main
-
+                  
                 $ git merge dev --no-edit
                 Merge made by the 'recursive' strategy.
                  README.md | 1 +
@@ -1053,15 +1050,17 @@
           </div>
           <div class="blk-r80 fragment">
             <pre>
-              <code class="s90 console" data-trim data-noescape data-line-numbers="1-3|5-7|9-12">
+              <code class="s90 console nonu" data-trim data-noescape data-line-numbers="1-4|6-9|11-14">
                 $ git switch dev
                 $ vi README.md  # modificación
-                $ git add .; git commit -m "Say hola"
-
+                $ git add .
+                $ git commit -m "Say hola"
+                 
                 $ git switch main
                 $ vi README.md  # modificación
-                $ git add .; git commit -m "Say hallo"
-
+                $ git add .
+                $ git commit -m "Say hallo"
+                  
                 $ git merge dev --no-edit
                 Auto-merging README.md
                 CONFLICT (content): Merge conflict in README.md
@@ -1078,32 +1077,32 @@
           </h3>
           <div class="blk-left">
             <p class="s60 red"><code>README.md</code></p>
-            <pre>
+            <pre class="fragment">
               <code class="console" data-trim data-noescape>
-                <span class="fragment" data-fragment-index="1"># work</span>
-                <span class="fragment yellow" data-fragment-index="2"><<<<<<< HEAD
+                # work
+                <span class="red"><<<<<<< HEAD
                 Hallo
                 ||||||| 8f1e81f
                 =======
                 Hola
                 >>>>>>> dev</span>
-                <span class="fragment" data-fragment-index="3">Just for testing purposes</span>
-                <span class="fragment" data-fragment-index="4">Hello World!</span>
-                <span class="fragment" data-fragment-index="5">Changes from dev branch</span>
-                <span class="fragment" data-fragment-index="6">Keep on working</span>
+                Just for testing purposes
+                Hello World!
+                Changes from dev branch
+                Keep on working
               </code>
             </pre>
           </div>
           <div class="blk-right">
             <p class="s60 green"><code>README.md</code></p>
-            <pre>
+            <pre class="fragment">
               <code class="console" data-trim data-noescape>
-                <span class="fragment" data-fragment-index="1"># work</span>
-                <span class="fragment yellow" data-fragment-index="2">Hola</span>
-                <span class="fragment" data-fragment-index="3">Just for testing purposes</span>
-                <span class="fragment" data-fragment-index="4">Hello World!</span>
-                <span class="fragment" data-fragment-index="5">Changes from dev branch</span>
-                <span class="fragment" data-fragment-index="6">Keep on working</span>
+                # work
+                <span class="green">Hola</span>
+                Just for testing purposes
+                Hello World!
+                Changes from dev branch
+                Keep on working
               </code>
             </pre>
           </div>
@@ -1115,7 +1114,7 @@
           </h3>
           <div class="r-stack">
             <pre class="fragment semi-fade-out" data-fragment-index="0">
-              <code class="console" data-trim data-noescape data-line-numbers="1,10-12">
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1,10-12">
                 $ git status
                 On branch main
                 Your branch is ahead of 'origin/main' by 3 commits.
@@ -1125,9 +1124,9 @@
                   (fix conflicts and run "git commit")
                   (use "git merge --abort" to abort the merge)
   
-                Unmerged paths:
-                  (use "git add [file]..." to mark resolution)
-                  both modified:   README.md
+                <span class="red">Unmerged paths:</span>
+                <span class="red">  (use "git add [file]..." to mark resolution)</span>
+                <span class="red">  both modified:   README.md</span>
   
                 no changes added to commit (use "git add" and/or "git commit -a")
               </code>
@@ -1201,7 +1200,7 @@
           </h3>
           <div class="r-stack">
             <pre class="fragment fade-out" data-fragment-index="0">
-              <code class="console s80" data-trim data-noescape data-line-numbers="1, 5,8,10,12">
+              <code class="console s80 nonu" data-trim data-noescape data-line-numbers="1, 5,8,10,12">
                 $ git status
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -1209,19 +1208,16 @@
                 Changes not staged for commit:
                   (use "git add [file]..." to update what will be committed)
                   (use "git restore [file]..." to discard changes in working directory)
-                  modified:   README.md
+                  <span class="red">modified:   README.md</span>
   
                 Untracked files:
                   (use "git add [file]..." to include in what will be committed)
-                  config.py
+                  <span class="red">config.py</span>
   
                 no changes added to commit (use "git add" and/or "git commit -a")
               </code>
             </pre>
-            <pre
-              class="fragment current-visible"
-              data-fragment-index="0"
-            >
+            <pre class="fragment current-visible" data-fragment-index="0">
               <code class="console" data-trim data-noescape>
                 $ git stash -u
                 Saved working directory and index state WIP on main:
@@ -1246,11 +1242,11 @@
                 Changes not staged for commit:
                   (use "git add [file]..." to update what will be committed)
                   (use "git restore [file]..." to discard changes in working directory)
-                  modified:   README.md
+                  <span class="red">modified:   README.md</span>
 
                 Untracked files:
                   (use "git add [file]..." to include in what will be committed)
-                  config.py
+                  <span class="red">config.py</span>
 
                 no changes added to commit (use "git add" and/or "git commit -a")
                 Dropped refs/stash@{0} (eb45cfdc63836cbc6417c358780ba55722c795b3)
@@ -1273,18 +1269,18 @@
           <pre>
             <code class="console" data-trim data-noescape>
               $ git log --pretty=oneline --abbrev-commit
-              c18e3f7 (HEAD -> main) Merge branch 'main' of github.com:sdelquin/work
-              1705ee9 (origin/main) Merge pull request #2 from sdelquin/dev
-              3149c76 (origin/dev, dev) Work in progress
-              101d7fb Fix conflict
-              24c1201 Say hallo
-              66c4e10 Say hola
-              aa94f74 Merge branch 'dev'
-              8f1e81f New notes
-              e44f857 Merge pull request #1 from sdelquin/dev
-              e8983c7 More changes
-              ae0abb3 Add welcome message
-              bdede5e Initial commit
+              <span class="yellow">c18e3f7</span> (HEAD -> main) Merge branch 'main' of github.com:sdelquin/work
+              <span class="yellow">1705ee9</span> (origin/main) Merge pull request #2 from sdelquin/dev
+              <span class="yellow">3149c76</span> (origin/dev, dev) Work in progress
+              <span class="yellow">101d7fb</span> Fix conflict
+              <span class="yellow">24c1201</span> Say hallo
+              <span class="yellow">66c4e10</span> Say hola
+              <span class="yellow">aa94f74</span> Merge branch 'dev'
+              <span class="yellow">8f1e81f</span> New notes
+              <span class="yellow">e44f857</span> Merge pull request #1 from sdelquin/dev
+              <span class="yellow">e8983c7</span> More changes
+              <span class="yellow">ae0abb3</span> Add welcome message
+              <span class="yellow">bdede5e</span> Initial commit
             </code>
           </pre>
         </section>
@@ -1312,8 +1308,8 @@
                 $ git commit -m "Add sum"
               </code>
             </pre>
-            <pre class="fragment">
-              <code class="console s90 framed-red" data-trim data-noescape>
+            <pre class="fragment framed-red">
+              <code class="console s90" data-trim data-noescape>
                 $ git tag -a 1.0.0 -m "Release version 1.0.0"
               </code>
             </pre>
@@ -1354,8 +1350,8 @@
           </h3>
           <ul class="check">
             <li class="fragment"><code>README.md</code></li>
-            <li class="fragment">
-              <code>LICENSE</code> $\Rightarrow$
+            <!-- prettier-ignore -->
+            <li class="fragment"><code>LICENSE</code> $\Rightarrow$
               <a href="https://www.gnu.org/licenses/agpl-3.0.txt">AGPL3</a>
             </li>
             <li class="fragment"><code>CHANGELOG</code></li>
@@ -1417,23 +1413,42 @@
           <h3>GitLab corporativo</h3>
           <p class="green">ETL</p>
           <pre class="clear">
-            <code class="console" data-trim data-noescape>
-              <span class="fragment red" data-fragment-index="0">📂 ETL Operaciones</span>
-                <span class="fragment" data-fragment-index="1">📂 020.010 Población</span>
-                  <span class="fragment" data-fragment-index="2">📂 E30260A Explotación Estadística del Padrón Municipal</span>
-                    <span class="fragment yellow" data-fragment-index="3">⭐ E30260A-DD2SD-PC0001.V0.1</span>
-                <span class="fragment" data-fragment-index="1">📂 070.010 Industria</span>
-                  <span class="fragment" data-fragment-index="2">📂 E30050A Indice de Producción Industrial</span>
-                    <span class="fragment yellow" data-fragment-index="3">⭐ E30050A-MDS2MDS-PC0001-V0.1</span>
-                <span class="fragment" data-fragment-index="1">📂 080.010 Comercio</span>
-                  <span class="fragment" data-fragment-index="2">📂 E30103A Indices de Comercio al por Menor</span>
-                    <span class="fragment yellow" data-fragment-index="3">⭐ E30103A-MDS2MDS-PC0001-VO.1</span>
-              <span class="fragment red" data-fragment-index="0">📂 ETL Transversales</span>
-               <span class="fragment" data-fragment-index="5"> 📂 PROCESA Procesamiento de datos y análisis de resultados</span>
-                 <span class="fragment" data-fragment-index="6"> 📂 GSBPM6.1.2 Ejecutar ajustes estacional-efect calendario</span>
+            <code class="console s90" data-trim data-noescape>
+              <span class="fragment red" data-fragment-index="0">📂 ETL Operacionales</span>
+                <span class="fragment" data-fragment-index="1">📂 080.010 Comercio <em class="green">(1)</em></span>
+                  <span class="fragment" data-fragment-index="2">📂 E30103A Indices de Comercio al por Menor <em class="green">(2)</em></span>
+                    <span class="fragment yellow" data-fragment-index="3">⭐ E30103A-MDS2MDS-PC0001-V0.1</span>
+              <span class="fragment red" data-fragment-index="4">📂 ETL Transversales</span>
+               <span class="fragment" data-fragment-index="5"> 📂 PROCESA Procesamiento de datos y análisis de resultados <em class="green">(3)</em></span>
+                 <span class="fragment" data-fragment-index="6"> 📂 GSBPM6.1.2 Ejecutar ajustes estacionales-efecto calendario <em class="green">(4)</em></span>
                     <span class="fragment yellow" data-fragment-index="7">⭐ GSBPM6.1.2-PC0001-V0.1</span>
             </code>
           </pre>
+          <ol class="s50">
+            <li class="fragment" data-fragment-index="1">
+              <a
+                href="https://www3.gobiernodecanarias.org/aplicaciones/operacionesistac/"
+                >Tema de operación estadística (ISTAC)</a
+              >
+            </li>
+            <li class="fragment" data-fragment-index="2">
+              <a
+                href="https://www3.gobiernodecanarias.org/aplicaciones/operacionesistac/"
+                >Operación estadística (ISTAC)</a
+              >
+            </li>
+            <li class="fragment" data-fragment-index="5">
+              <a
+                href="https://estadisticas.arte-consultores.com/wiki/wiki/qdatos/view/Main/Documentaci%C3%B3n%20aprobada/Marco%20com%C3%BAn%20de%20procesos%20estad%C3%ADsticos/Procesos/Fichas%20de%20procesos/"
+                >Proceso clave en el modelo de calidad (ISTAC)</a
+              >
+            </li>
+            <li class="fragment" data-fragment-index="6">
+              <a href="https://www.ine.es/clasifi/estandar_procesos.pdf"
+                >Proceso de producción de operaciones estadísticas (INE)</a
+              >
+            </li>
+          </ol>
         </section>
 
         <section data-auto-animate>
@@ -1448,6 +1463,24 @@
           </pre>
         </section>
 
+        <section data-auto-animate>
+          <h3>GitLab corporativo</h3>
+          <p class="green">URL</p>
+          <pre class="clear">
+            <code class="console" data-trim data-noescape>
+              <span class="fragment">https://www.gobiernodecanarias.net</span>
+                <span class="fragment"><span class="red">└─</span> /aplicaciones/git/istac/</span>
+                  <span class="fragment"><span class="red">└─</span> /etl/operacionales/080.010-comercio/e30103a/</span>
+                    <span class="fragment"><span class="red">└─</span> e30103a-mds2mds-pc0001-v0.1</span>
+            </code>
+          </pre>
+          <a
+            class="fragment r-fit-text"
+            href="https://www.gobiernodecanarias.net/aplicaciones/git/istac/etl/operacionales/080.010-comercio/e30103a/e30103a-mds2mds-pc0001-v0.1"
+            >https://www.gobiernodecanarias.net/aplicaciones/git/istac/etl/operacionales/080.010-comercio/e30103a/e30103a-mds2mds-pc0001-v0.1</a
+          >
+        </section>
+
         <section>
           <h3>¡Gracias! 🎉</h3>
           <img
@@ -1457,7 +1490,6 @@
             alt=""
           />
         </section>
-
       </div>
     </div>
 
