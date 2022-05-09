@@ -70,6 +70,22 @@ pre.clear code {
   background: none;
 }
 
+code.nonu td.hljs-ln-line.hljs-ln-numbers {
+  display: none;
+}
+
+.alpha25 {
+  opacity: 75%;
+}
+
+.alpha50 {
+  opacity: 50%;
+}
+
+.alpha75 {
+  opacity: 75%;
+}
+
 #header-left {
   position: absolute;
   top: 1%;
