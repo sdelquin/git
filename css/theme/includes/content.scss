@@ -52,3 +52,14 @@
     }
   }
 }
+
+pre.clear {
+  &.code-wrapper {
+    border: 0;
+    box-shadow: none;
+  }
+
+  code {
+    background: none;
+  }
+}
