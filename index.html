@@ -1381,6 +1381,76 @@
 
         <section>
           <div class="r-fit-text">
+            <code><span class="yellow">git</span> diff</code>
+          </div>
+          <p class="green">Encontrando diferencias</p>
+        </section>
+
+        <section data-auto-animate>
+          <h3>
+            <code>git <span class="red">diff</span></code>
+          </h3>
+          <div class="blk-left">
+            <div class="fragment">
+              <code class="red s70">README.md</code>
+              <pre>
+                <code class="console s90" data-trim data-noescape data-line-numbers="4">
+                  # work
+                  Hola
+                  Just for testing purposes
+                  Hello World!
+                  Changes from dev branch
+                  Keep on working
+                  Work in progress               
+                </code>
+              </pre>
+            </div>
+            <div class="fragment">
+              <code class="green s70">README.md</code>
+              <pre>
+                <code class="console s90" data-trim data-noescape data-line-numbers="4">
+                  # work
+                  Hola
+                  Just for testing purposes
+                  Ciao Mondo! 
+                  Changes from dev branch
+                  Keep on working
+                  Work in progress               
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div class="fragment blk-right">
+            <pre>
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1|2|3|4-5|6|7-9,12-14|10-11">
+                $ git diff
+                diff --git a/README.md b/README.md
+                index 4ed5232..bb48069 100644
+                --- a/README.md
+                +++ b/README.md
+                <span class="yellow">@@ -1,7 +1,7 @@</span>
+                # work
+                Hola
+                Just for testing purposes
+                <span class="red">-Hello World!</span>
+                <span class="green">+Ciao Mondo!</span>
+                Changes from dev branch
+                Keep on working
+                Work in progress              
+              </code>
+            </pre>
+            <div class="fragment s40">
+              ☁️
+              <a
+                href="https://levelup.gitconnected.com/what-is-git-diff-and-how-do-we-read-the-output-69f5b2036186"
+                >What is Git Diff and How Do We Read the Output?</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="r-fit-text">
             <code><span class="yellow">git</span> tag</code>
           </div>
           <p class="green">Etiquetando versiones</p>
