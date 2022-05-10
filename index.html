@@ -1336,27 +1336,47 @@
           <p class="green">Mostrando el historial de cambios</p>
         </section>
 
-        <section>
+        <section data-auto-animate>
           <h3>
             <code>git <span class="red">log</span></code>
           </h3>
-          <pre>
-            <code class="console" data-trim data-noescape>
-              $ git log --pretty=oneline --abbrev-commit
-              <span class="yellow">c18e3f7</span> (HEAD -> main) Merge branch 'main' of github.com:sdelquin/work
-              <span class="yellow">1705ee9</span> (origin/main) Merge pull request #2 from sdelquin/dev
-              <span class="yellow">3149c76</span> (origin/dev, dev) Work in progress
-              <span class="yellow">101d7fb</span> Fix conflict
-              <span class="yellow">24c1201</span> Say hallo
-              <span class="yellow">66c4e10</span> Say hola
-              <span class="yellow">aa94f74</span> Merge branch 'dev'
-              <span class="yellow">8f1e81f</span> New notes
-              <span class="yellow">e44f857</span> Merge pull request #1 from sdelquin/dev
-              <span class="yellow">e8983c7</span> More changes
-              <span class="yellow">ae0abb3</span> Add welcome message
-              <span class="yellow">bdede5e</span> Initial commit
-            </code>
-          </pre>
+          <div class="r-stack">
+            <pre class="fragment fade-out" data-fragment-index="0">
+              <code class="console" data-trim data-noescape>
+                $ git log --pretty=oneline --abbrev-commit
+                <span class="yellow">c18e3f7</span> (HEAD -> main) Merge branch 'main' of github.com:sdelquin/work
+                <span class="yellow">1705ee9</span> (origin/main) Merge pull request #2 from sdelquin/dev
+                <span class="yellow">3149c76</span> (origin/dev, dev) Work in progress
+                <span class="yellow">101d7fb</span> Fix conflict
+                <span class="yellow">24c1201</span> Say hallo
+                <span class="yellow">66c4e10</span> Say hola
+                <span class="yellow">aa94f74</span> Merge branch 'dev'
+                <span class="yellow">8f1e81f</span> New notes
+                <span class="yellow">e44f857</span> Merge pull request #1 from sdelquin/dev
+                <span class="yellow">e8983c7</span> More changes
+                <span class="yellow">ae0abb3</span> Add welcome message
+                <span class="yellow">bdede5e</span> Initial commit
+              </code>
+            </pre>
+            <pre class="fragment current-visible" data-fragment-index="0">
+              <code class="console" data-trim data-noescape>
+              $ git <span class="green">shortlog</span>
+              Sergio Delgado Quintero (13):
+                    Initial commit
+                    Add welcome message
+                    More changes
+                    Merge pull request #1 from sdelquin/dev
+                    New notes
+                    Merge branch 'dev'
+                    Say hola
+                    Say hallo
+                    Fix conflict
+                    Work in progress
+                    Merge pull request #2 from sdelquin/dev
+                    Merge branch 'main' of github.com:sdelquin/work
+              </code>
+            </pre>
+          </div>
         </section>
 
         <section>
@@ -1404,6 +1424,8 @@
             ⚡ <code>git <span class="red">push</span> --follow-tags</code>
           </p>
         </section>
+
+        <section><h3>Hola</h3></section>
 
         <section>
           <h3>Índice</h3>
