@@ -701,6 +701,60 @@
         </section>
 
         <section>
+          <p class="r-fit-text">
+            ⚡ <code>git <span class="red">restore</span> .</code>
+          </p>
+        </section>
+
+        <section>
+          <div class="r-fit-text">
+            <code><span class="yellow">git</span> clean</code>
+          </div>
+          <p class="green">Borrando ficheros sin seguimiento</p>
+        </section>
+
+        <section>
+          <h3>
+            <code>git <span class="red">clean</span></code>
+          </h3>
+          <div class="blk-l40">
+            <pre>
+              <code class="console s80" data-trim data-noescape>
+                $ git status
+                On branch main
+                Your branch is up to date with 'origin/main'.
+
+                Untracked files:
+                  (use "git add [file]..." to include in what will be committed)
+                  <span class="red">process.C</span>
+                  <span class="red">upload.C</span>
+
+                nothing added to commit but untracked files present (use "git add" to track)
+              </code>
+            </pre>
+          </div>
+          <div class="blk-r60">
+            <pre class="fragment">
+              <code class="console s80" data-trim data-noescape>
+                $ <span class="yellow">git clean -i</span>
+                Would remove the following items:
+                  <span class="red">process.C  upload.C</span>
+                *** Commands ***
+                  1: clean                2: filter by pattern
+                  3: select by numbers    4: ask each
+                  5: quit                 6: help
+                <span class="yellow">What now> 4</span>
+                Remove process.C [y/N]? y
+                Remove upload.C [y/N]? y
+                Removing process.C
+                Removing upload.C
+              </code>
+            </pre>
+            <p class="fragment s80"><code>⚡ git clean -f</code></p>
+          </div>
+        </section>
+
+        <section>
           <h3>Ramas</h3>
           <img src="img/git-branches.jpg" alt="Git branches" />
         </section>
@@ -1079,6 +1133,12 @@
               </code>
             </pre>
           </div>
+        </section>
+
+        <section>
+          <p class="r-fit-text">
+            ⚡ <code>git <span class="red">push</span> --follow-tags</code>
+          </p>
         </section>
 
         <section>
@@ -1568,9 +1628,30 @@
         </section>
 
         <section>
-          <p class="r-fit-text">
-            ⚡ <code>git <span class="red">push</span> --follow-tags</code>
+          <div class="r-fit-text">
+            <code><span class="yellow">git</span> blame</code>
+          </div>
+          <p class="green">
+            Buscando <span class="strike">culpables</span> responsables
           </p>
+        </section>
+
+        <section>
+          <h3>
+            <code>git <span class="red">blame</span></code>
+          </h3>
+          <pre>
+            <code class="console s80" data-trim data-noescape>
+              $ <span class="yellow">git blame README.md</span>
+              ^bdede5e (Sergio Delgado Quintero 2022-05-05 09:58:55 +0100 1) # work
+              66c4e102 (Sergio Delgado Quintero 2022-05-06 13:42:19 +0100 2) Hola
+              ^bdede5e (Sergio Delgado Quintero 2022-05-05 09:58:55 +0100 3) Just for testing purposes
+              ae0abb3a (Sergio Delgado Quintero 2022-05-05 12:51:16 +0100 4) Hello World!
+              e8983c79 (Sergio Delgado Quintero 2022-05-06 13:12:55 +0100 5) Changes from dev branch
+              8f1e81f6 (Sergio Delgado Quintero 2022-05-06 13:18:48 +0100 6) Keep on working
+              3149c76f (Sergio Delgado Quintero 2022-05-06 18:59:57 +0100 7) Work in progress
+            </code>
+          </pre>
         </section>
 
         <section>
