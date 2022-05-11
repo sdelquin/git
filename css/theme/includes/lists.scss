@@ -1,0 +1,41 @@
+@counter-style counter-animals {
+  system: cyclic;
+  symbols: "🦁" "🐶" "🦄" "🦊" "🐨" "🐮" "🐼" "🐱" "🐸" "🐙";
+  suffix: " ";
+}
+
+@counter-style counter-cross {
+  system: cyclic;
+  symbols: "❌";
+  suffix: " ";
+}
+
+@counter-style counter-check {
+  system: cyclic;
+  symbols: "✅";
+  suffix: " ";
+}
+
+@counter-style counter-dollar {
+  system: cyclic;
+  symbols: "$";
+  suffix: " ";
+}
+
+.reveal ul {
+  &.empty {
+    list-style-type: none;
+  }
+  &.animals {
+    list-style-type: counter-animals;
+  }
+  &.cross {
+    list-style-type: counter-cross;
+  }
+  &.check {
+    list-style-type: counter-check;
+  }
+  &.dollar {
+    list-style-type: counter-dollar;
+  }
+}

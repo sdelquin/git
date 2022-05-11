@@ -26,33 +26,6 @@
   text-align: right;
 }
 
-.reveal ul {
-  &.blank {
-    list-style-type: none;
-  }
-  &.check {
-    list-style-type: none;
-    li:before {
-      content: "✅";
-      margin-right: 1rem;
-    }
-  }
-  &.cross {
-    list-style-type: none;
-    li:before {
-      content: "❌";
-      margin-right: 1rem;
-    }
-  }
-  &.dollar {
-    list-style-type: none;
-    li:before {
-      content: "$";
-      margin-right: 1rem;
-    }
-  }
-}
-
 pre.clear {
   &.code-wrapper {
     border: 0;
@@ -80,4 +53,8 @@ code.nonu {
 
 .alpha75 {
   opacity: 75%;
+}
+
+.vmiddle {
+  vertical-align: middle;
 }

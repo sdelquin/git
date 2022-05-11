@@ -181,7 +181,7 @@
           </pre>
           <div class="fragment">
             <p>
-              👇🏻 Crea un fichero en <code class="red">$HOME/.gitconfig</code>
+              👇🏻 Crea un archivo en <code class="red">$HOME/.gitconfig</code>
             </p>
             <pre>
               <code class="ini" data-trim data-noescape>
@@ -351,7 +351,7 @@
               <td>0</td>
             </tr>
           </table>
-          <p class="fragment">
+          <p class="fragment s80">
             ☁️
             <a href="️https://git-scm.com/downloads/guis/"
               >https://git-scm.com/downloads/guis/</a
@@ -405,7 +405,7 @@
 
         <section>
           <h3>Flujo de trabajo 4️⃣</h3>
-          <p>Añadir los cambios</p>
+          <p>Preparar los cambios</p>
           <pre>
             <code class="console" data-trim data-noescape>
               $ git add .
@@ -508,16 +508,56 @@
           </pre>
         </section>
 
-        <section>
-          <h3>Estados de un fichero en <code>git</code></h3>
-          <img class="r-stretch" src="img/git-states.jpg" alt="" />
+        <section data-auto-animate>
+          <h3>Estados de un archivo en <code>git</code></h3>
+          <img class="w75" src="img/git-states.svg" alt="" />
+        </section>
+
+        <section data-auto-animate>
+          <h3>Estados de un archivo en <code>git</code></h3>
+          <ul class="animals">
+            <li class="fragment">
+              <code>ignored</code>
+              <span class="green">$\Rightarrow$</span> ignorado
+            </li>
+            <li class="fragment">
+              <code>tracked</code>
+              <span class="green">$\Rightarrow$</span> con seguimiento
+            </li>
+            <li class="fragment">
+              <code>untracked</code>
+              <span class="green">$\Rightarrow$</span> sin seguimiento
+            </li>
+            <li class="fragment">
+              <code>modified</code>
+              <span class="green">$\Rightarrow$</span> modificado
+            </li>
+            <li class="fragment">
+              <code>staged</code>
+              <span class="green">$\Rightarrow$</span> preparado
+              <ul class="empty">
+                <li class="yellow s75">
+                  <code>git add</code> $\rightarrow$ preparar
+                </li>
+              </ul>
+            </li>
+            <li class="fragment">
+              <code>committed</code>
+              <span class="green">$\Rightarrow$</span> confirmado
+              <ul class="empty">
+                <li class="yellow s75">
+                  <code>git commit</code> $\rightarrow$ confirmar
+                </li>
+              </ul>
+            </li>
+          </ul>
         </section>
 
         <section>
           <div class="r-fit-text">
             <code><span class="yellow">git</span> add</code>
           </div>
-          <p class="green">Añadiendo cambios/ficheros a "staged"</p>
+          <p class="green">Preparando los cambios</p>
         </section>
 
         <section>
@@ -552,7 +592,7 @@
           <div class="r-fit-text">
             <code><span class="yellow">git</span> commit</code>
           </div>
-          <p class="green">Consolidando los cambios hechos</p>
+          <p class="green">Confirmando los cambios</p>
         </section>
 
         <section>
@@ -591,11 +631,11 @@
           <ol>
             <li class="fragment">Haz los cambios que necesites 👷🏻‍♀️</li>
             <li class="fragment">
-              "Comitea" usando el siguiente comando
+              Prepara y confirma los cambios
               <pre>
                 <code class="console" data-trim data-noescape>
                   $ git add .
-                  $ git commit --amend
+                  $ git commit --amend <span class="red">(-m)</span>
                 </code>
               </pre>
             </li>
@@ -624,7 +664,7 @@
           </h3>
           <p>
             <span class="green">Escenario 1:</span> Hemos modificado
-            <code class="yellow">README.md</code> pero está aún sin añadir
+            <code class="yellow">README.md</code> pero está aún sin preparar
           </p>
           <div class="r-stack">
             <pre class="fragment fade-out" data-fragment-index="0">
@@ -666,7 +706,7 @@
           </h3>
           <p>
             <span class="green">Escenario 2:</span> Hemos modificado
-            <code class="yellow">README.md</code> y lo hemos añadido
+            <code class="yellow">README.md</code> y lo hemos preparado
           </p>
           <div class="r-stack">
             <pre class="fragment fade-out" data-fragment-index="0">
@@ -710,7 +750,7 @@
           <div class="r-fit-text">
             <code><span class="yellow">git</span> clean</code>
           </div>
-          <p class="green">Borrando ficheros sin seguimiento</p>
+          <p class="green">Borrando archivos sin seguimiento</p>
         </section>
 
         <section>
@@ -756,7 +796,7 @@
 
         <section>
           <h3>Ramas</h3>
-          <img src="img/git-branches.jpg" alt="Git branches" />
+          <img src="img/git-branches.svg" alt="Git branches" />
         </section>
 
         <section>
@@ -1045,7 +1085,7 @@
           </h3>
           <div class="r-stack">
             <pre>
-              <code class="console nonu" data-trim data-noescape  data-line-numbers="1|2-3|4-5|6-7|8|9">
+              <code class="console nonu fade-in-then-semi-out" data-trim data-noescape  data-line-numbers="1|2-3|4-5|6-7|8|9">
                 $ git push
                 Enumerating objects: 5, done.
                 Counting objects: 100% (5/5), done.
@@ -1060,7 +1100,7 @@
             <pre class="fragment framed-red">
               <code class="console" data-trim data-noescape>
                 $ git branch -vv
-                * main ae0abb3 [origin/main] Add welcome message
+                * <span class="green">main</span> ae0abb3 [origin/main] Add welcome message
               </code>
             </pre>
           </div>
@@ -1094,7 +1134,7 @@
             <pre class="fragment framed-red">
               <code class="console" data-trim data-noescape>
                 $ git branch -vv
-                * dev  ae0abb3 Add welcome message
+                * <span class="green">dev</span>  ae0abb3 Add welcome message
                   main ae0abb3 [origin/main] Add welcome message
               </code>
             </pre>
@@ -1108,7 +1148,7 @@
           <div class="r-stack">
             <div>
               <pre>
-                <code class="console nonu" data-trim data-noescape data-line-numbers="1|3-6|7-8|9">
+                <code class="console nonu fade-in-then-semi-out" data-trim data-noescape data-line-numbers="1|3-6|7-8|9">
                   $ git push -u origin dev
                   Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
                   remote:
@@ -1128,7 +1168,7 @@
             <pre class="fragment framed-red">
               <code class="console" data-trim data-noescape>
                 $ git branch -vv
-                * dev  ae0abb3 [origin/dev] Add welcome message
+                * <span class="green">dev</span>  ae0abb3 [origin/dev] Add welcome message
                   main ae0abb3 [origin/main] Add welcome message
               </code>
             </pre>
@@ -1153,7 +1193,7 @@
             <code>git <span class="red">merge</span> 1️⃣</code>
           </h3>
           <div class="blk-l20">
-            <img src="img/git-merge1.png" alt="" />
+            <img src="img/git-merge1.svg" alt="" />
           </div>
           <div class="blk-r80 fragment">
             <pre>
@@ -1180,7 +1220,7 @@
             <code>git <span class="red">merge</span> 2️⃣</code>
           </h3>
           <div class="blk-l20">
-            <img src="img/git-merge2.png" alt="" />
+            <img src="img/git-merge2.svg" alt="" />
           </div>
           <div class="blk-r80 fragment">
             <pre>
@@ -1197,7 +1237,7 @@
                   
                 $ git merge dev --no-edit
                 Auto-merging README.md
-                CONFLICT (content): Merge conflict in README.md
+                <span class="red">CONFLICT</span> (content): Merge conflict in README.md
                 Automatic merge failed; fix conflicts and then commit the result.
               </code>
             </pre>
@@ -1209,6 +1249,7 @@
           <h3>
             <code>git <span class="red">merge</span> 2️⃣</code>
           </h3>
+          <p>Resolviendo el conflicto 🥊</p>
           <div class="blk-left">
             <p class="s60 red"><code>README.md</code></p>
             <pre class="fragment">
@@ -1246,6 +1287,7 @@
           <h3>
             <code>git <span class="red">merge</span> 2️⃣</code>
           </h3>
+          <p>Resolviendo el conflicto 🥊</p>
           <div class="r-stack">
             <pre class="fragment semi-fade-out" data-fragment-index="0">
               <code class="console nonu" data-trim data-noescape data-line-numbers="1,10-12">
@@ -1289,7 +1331,7 @@
             <code>git <span class="red">pull</span></code>
           </h3>
           <div class="blk-left">
-            <img src="img/git-pull.png" alt="" />
+            <img src="img/git-pull.svg" alt="" />
           </div>
           <div class="blk-right">
             <pre class="fragment">
@@ -1412,7 +1454,7 @@
           </h3>
           <div class="r-stack">
             <pre class="fragment fade-out" data-fragment-index="0">
-              <code class="console s80 nonu" data-trim data-noescape data-line-numbers="1, 5,8,10,12">
+              <code class="console s80 nonu" data-trim data-noescape data-line-numbers="1,5,8,10,12">
                 $ git status
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -1429,13 +1471,20 @@
                 no changes added to commit (use "git add" and/or "git commit -a")
               </code>
             </pre>
-            <pre class="fragment current-visible" data-fragment-index="0">
-              <code class="console" data-trim data-noescape>
-                $ git stash -u
-                Saved working directory and index state WIP on main:
-                c18e3f7 Merge branch 'main' of github.com:sdelquin/work
-              </code>
-            </pre>
+            <div class="fragment current-visible w100" data-fragment-index="0">
+              <pre>
+                <code class="console" data-trim data-noescape>
+                  $ git stash -u
+                  Saved working directory and index state WIP on main:
+                  c18e3f7 Merge branch 'main' of github.com:sdelquin/work
+                </code>
+              </pre>
+              <pre class="clear">
+                  <code class="console alpha25" data-trim data-noescape>
+                    -u = --include-untracked
+                  </code>
+              </pre>
+            </div>
             <pre class="fragment fade-out current-visible">
               <code class="console" data-trim data-noescape>
                 $ git status
@@ -1446,7 +1495,7 @@
               </code>
             </pre>
             <pre class="fragment">
-              <code class="console s80" data-trim data-noescape data-line-numbers="1, 5,8,10,12">
+              <code class="console nonu s80" data-trim data-noescape data-line-numbers="1, 5,8,10,12">
                 $ git stash pop
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -1599,7 +1648,7 @@
             <code>git <span class="red">tag</span></code>
           </h3>
           <div class="blk-l30">
-            <img src="img/git-tag.png" alt="" />
+            <img src="img/git-tag.svg" alt="" />
           </div>
           <div class="blk-r70">
             <pre class="fragment fade-in-then-semi-out">
@@ -1655,16 +1704,13 @@
         </section>
 
         <section>
-          <h3>Magia negra 🧙🏻</h3>
-          <!-- prettier-ignore -->
-          <ul class="dollar">
-            <li><code>git <span class="red">rebase</span></code></li>
-            <li><code>git <span class="red">bisect</span></code></li>
-            <li><code>git <span class="red">reflog</span></code></li>
-            <li><code>git <span class="red">cherry-pick</span></code></li>
-            <li><code>git <span class="red">pull --rebase</span></code></li>
-            <li><code>git <span class="red">reset</span></code></li>
-          </ul>
+          <div class="r-fit-text">
+            <p>
+              Y una lista
+              <a href="https://git-scm.com/docs/git#_git_commands">/enorme/</a>
+              de comandos... 🤯
+            </p>
+          </div>
         </section>
 
         <section>
@@ -1695,12 +1741,112 @@
           </ul>
         </section>
 
+        <section data-auto-animate>
+          <h3><code>CHANGELOG</code></h3>
+          <pre>
+            <code class="markdown s80 nonu" data-trim data-noescape data-line-numbers="1|2|4|6|7-10|12-14|16-17">
+              # Changelog
+              All notable changes to this project will be documented in this file.
+
+              ## [Unreleased]
+
+              ## [1.0.0] - 2017-06-20
+              ### Added
+              - New visual identity by [@tylerfortune8](https://github.com/tylerfortune8).
+              - Links to latest released version in previous versions.
+              - Version navigation. [#141](https://github.com/foo/bar/issues/141)
+
+              ### Changed
+              - Start using "changelog" over "change log" since it's the common usage.
+              - Rewrite "What makes unicorns cry?" section.
+
+              ### Removed
+              - Section about "changelog" vs "CHANGELOG".
+            </code>
+          </pre>
+        </section>
+
+        <section data-auto-animate>
+          <h3><code>CHANGELOG</code></h3>
+          <img class="w70" src="img/changelog.png" alt="" />
+          <p class="fragment s90">
+            ☁️
+            <a href="https://keepachangelog.com/"
+              >https://keepachangelog.com/</a
+            >
+          </p>
+        </section>
+
+        <section>
+          <h3><code>.gitignore</code></h3>
+          <ul class="empty">
+            <li class="fragment semi-fade-out current-visible">
+              <code>supersecret.dat</code>
+            </li>
+            <li class="fragment semi-fade-out current-visible">
+              <code><span class="green">*</span>.log</code>
+            </li>
+            <li class="fragment semi-fade-out current-visible">
+              <code
+                ><span class="green">**</span>/output/<span class="green"
+                  >*</span
+                >.obj</code
+              >
+            </li>
+            <li class="fragment semi-fade-out current-visible">
+              <code><span class="yellow">/</span>env</code>
+            </li>
+            <li class="fragment semi-fade-out current-visible">
+              <code>cache</code>
+            </li>
+            <li class="fragment semi-fade-out current-visible">
+              <code>cache<span class="yellow">/</span></code>
+            </li>
+            <li class="fragment semi-fade-out current-visible">
+              <code><span class="red">!</span>cache/important.txt</code>
+            </li>
+          </ul>
+          <p class="fragment s50 ptop5">
+            ☁️
+            <a
+              href="https://www.atlassian.com/es/git/tutorials/saving-changes/gitignore"
+              >https://www.atlassian.com/es/git/tutorials/saving-changes/gitignore</a
+            >
+          </p>
+        </section>
+
         <section>
           <h3>Lo que <span class="red">/no/</span> debería estar en el repo</h3>
           <ul class="cross">
-            <li class="fragment">Contraseñas o credenciales</li>
-            <li class="fragment">Ficheros generados</li>
-            <li class="fragment">Ficheros multimedia</li>
+            <li class="fragment">
+              Contraseñas o credenciales:
+              <ul class="empty s70 red">
+                <li><code>.env</code></li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Archivos generados:
+              <ul class="empty s70 red">
+                <li><code>/node_modules /packages</code></li>
+                <li><code>*.pyc *.class</code></li>
+                <li><code>/bin /out /target</code></li>
+                <li><code>*.log *.lock *.tmp</code></li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Archivos multimedia:
+              <ul class="empty s70 red">
+                <li><code>.DS_Store Thumbs.db</code></li>
+                <li><code>.artwork</code></li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Archivos configuración IDE:
+              <ul class="empty s70 red">
+                <li><code>.idea</code></li>
+                <li><code>.vscode</code></li>
+              </ul>
+            </li>
           </ul>
         </section>
 
@@ -1866,6 +2012,12 @@
             src="img/byebye.gif"
             alt=""
           />
+          <p class="s70">
+            Powered by
+            <a href="https://revealjs.com/"
+              ><img class="vmiddle w15" src="img/reveal.svg" alt=""
+            /></a>
+          </p>
         </section>
       </div>
     </div>
