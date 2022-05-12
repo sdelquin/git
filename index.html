@@ -1172,12 +1172,6 @@
         </section>
 
         <section>
-          <p class="r-fit-text">
-            ⚡ <code>git <span class="red">push</span> --follow-tags</code>
-          </p>
-        </section>
-
-        <section>
           <div class="r-fit-text">
             <code><span class="yellow">git</span> merge</code>
           </div>
@@ -1350,16 +1344,6 @@
         </section>
 
         <section>
-          <p>
-            <code>git <span class="red">pull</span></code>
-            <span class="green">$\Leftrightarrow$</span>
-            <code>git <span class="yellow">fetch</span></code> $+$
-            <code>git <span class="yellow">merge</span></code>
-          </p>
-          <img src="img/idea.gif" />
-        </section>
-
-        <section>
           <h3>
             Pull Request
             <img
@@ -1416,6 +1400,101 @@
               class="fragment w80"
               src="img/merge-request/merge-request-3.jpg"
             />
+          </div>
+        </section>
+
+        <section>
+          <p>
+            <code>git <span class="red">pull</span></code>
+            <span class="green">$\Leftrightarrow$</span>
+            <code>git <span class="yellow">fetch</span></code> $+$
+            <code>git <span class="yellow">merge</span></code>
+          </p>
+          <img src="img/idea.gif" />
+        </section>
+
+        <section>
+          <div class="r-fit-text">
+            <code><span class="yellow">git</span> fetch</code>
+          </div>
+          <p class="green">Descargando todo lo nuevo</p>
+        </section>
+
+        <section>
+          <h3><span class="red">/Colaborando/</span> mediante ramas</h3>
+          <div class="blk-l60">
+            <div class="s150">🧑🏻‍🔧</div>
+            <pre>
+                  <code class="console" data-trim data-noescape>
+                    $ git switch -c colab
+                    $ # edit README.md
+                    $ git add .
+                    $ git commit -m "Help from outside"
+                    $ git push origin colab
+                  </code>
+                </pre>
+          </div>
+          <div class="blk-r40">
+            <img class="fragment" src="img/colab-branch.png" />
+          </div>
+        </section>
+
+        <section>
+          <h3><span class="red">/Colaborando/</span> mediante ramas</h3>
+          <p class="s150">🙋🏻‍♀️</p>
+          <div class="r-stack f90">
+            <pre class="fragment fade-out" data-fragment-index="0">
+              <code class="console" data-trim data-noescape>
+                $ git branch -avv    
+                  dev                 3149c76 [origin/dev] Work in progress
+                * <span class="green">main</span>                7c3682f [origin/main] Add sum
+                  <span class="red">remotes/origin/dev</span>  3149c76 Work in progress
+                  <span class="red">remotes/origin/main</span> 7c3682f Add sum
+              </code>
+            </pre>
+            <pre
+              class="fragment fade-out current-visible"
+              data-fragment-index="0"
+            >
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1,8">
+                $ git fetch
+                remote: Enumerating objects: 5, done.
+                remote: Counting objects: 100% (5/5), done.
+                remote: Compressing objects: 100% (2/2), done.
+                remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+                Unpacking objects: 100% (3/3), 353 bytes | 88.00 KiB/s, done.
+                From github.com:sdelquin/work
+                * [new branch]      colab      -> origin/colab
+              </code>
+            </pre>
+            <pre class="fragment fade-out current-visible">
+              <code class="console" data-trim data-noescape>
+                $ git branch -avv    
+                  dev                   3149c76 [origin/dev] Work in progress
+                * <span class="green">main</span>                  7c3682f [origin/main] Add sum
+                  <span class="red">remotes/origin/colab</span>  46b7b56 Help from outside
+                  <span class="red">remotes/origin/dev</span>    3149c76 Work in progress
+                  <span class="red">remotes/origin/main</span>   7c3682f Add sum
+              </code>
+            </pre>
+            <pre class="fragment fade-out current-visible">
+              <code class="console s90" data-trim data-noescape>
+                $ git switch colab
+                Branch 'colab' set up to track remote branch 'colab' from 'origin'.
+                Switched to a new branch 'colab'
+              </code>
+            </pre>
+            <pre class="fragment">
+              <code class="console s95" data-trim data-noescape>
+                $ git branch -avv    
+                * <span class="green">colab</span>                 46b7b56 [origin/colab] Help from outside
+                  dev                   3149c76 [origin/dev] Work in progress
+                  main                  7c3682f [origin/main] Add sum
+                  <span class="red">remotes/origin/colab</span>  46b7b56 Help from outside
+                  <span class="red">remotes/origin/dev</span>    3149c76 Work in progress
+                  <span class="red">remotes/origin/main</span>   7c3682f Add sum
+              </code>
+            </pre>
           </div>
         </section>
 
@@ -1652,6 +1731,12 @@
               ☁️ <a href="https://semver.org/lang/es/">Versionado semántico</a>
             </p>
           </div>
+        </section>
+
+        <section>
+          <p class="r-fit-text">
+            ⚡ <code>git <span class="red">push</span> --follow-tags</code>
+          </p>
         </section>
 
         <section>
