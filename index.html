@@ -907,7 +907,7 @@
           <p class="green">Gestionando las direcciones remotas</p>
         </section>
 
-        <section>
+        <section data-auto-animate>
           <h3>
             <code>git <span class="red">remote</span></code>
           </h3>
@@ -918,11 +918,51 @@
               origin	git@github.com:sdelquin/work.git (push)
             </code>
           </pre>
-          <!-- prettier-ignore -->
-          <ul class="dollar fragment">
-            <li><code>git remote <span class="green">add</span></code></li>
-            <li><code>git remote <span class="green">remove</span></code></li>
-          </ul>
+        </section>
+
+        <section data-auto-animate>
+          <h3>
+            <code>git <span class="red">remote</span></code>
+          </h3>
+          <h4>Modificando remotos 👷🏻</h4>
+          <div class="blk-l40 fragment">
+            <p>
+              Vía <span class="yellow"><code>git</code></span>
+            </p>
+            <ul class="dollar s75">
+              <li>
+                <code>git remote <span class="green">add</span></code>
+              </li>
+              <li>
+                <code>git remote <span class="green">remove</span></code>
+              </li>
+            </ul>
+          </div>
+          <div class="blk-r60 fragment">
+            <p>
+              Vía <span class="red"><code>.git/config</code> 🥷🏻</span>
+            </p>
+            <pre>
+              <code class="ini s85 nonu" data-trim data-noescape data-line-numbers="8-9">
+                [core]
+                  repositoryformatversion = 0
+                  filemode = true
+                  bare = false
+                  logallrefupdates = true
+                  ignorecase = true
+                  precomposeunicode = true
+                [remote "origin"]
+                  url = git@github.com:sdelquin/work.git
+                  fetch = +refs/heads/*:refs/remotes/origin/*
+                [branch "main"]
+                  remote = origin
+                  merge = refs/heads/main
+                [branch "dev"]
+                  remote = origin
+                  merge = refs/heads/dev
+              </code>
+            </pre>
+          </div>
         </section>
 
         <section>
