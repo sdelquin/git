@@ -22,6 +22,18 @@
   suffix: " ";
 }
 
+@counter-style counter-green-dot {
+  system: cyclic;
+  symbols: "🟢";
+  suffix: " ";
+}
+
+@counter-style counter-red-dot {
+  system: cyclic;
+  symbols: "🔴";
+  suffix: " ";
+}
+
 .reveal ul {
   &.empty {
     list-style-type: none;
@@ -37,5 +49,11 @@
   }
   &.dollar {
     list-style-type: counter-dollar;
+  }
+  &.green-dot {
+    list-style-type: counter-green-dot;
+  }
+  &.red-dot {
+    list-style-type: counter-red-dot;
   }
 }
