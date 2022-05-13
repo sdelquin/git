@@ -744,6 +744,10 @@ pre.code-wrapper.framed-green {
   list-style-type: counter-red-dot;
 }
 
+html.print-pdf .reveal pre {
+  box-shadow: none;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/

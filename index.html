@@ -2231,8 +2231,6 @@
           RevealMath.KaTeX,
         ],
       });
-
-      Reveal.configure({ pdfSeparateFragments: false });
     </script>
 
     <!-- Hack to add header/footer: https://stackoverflow.com/a/37518822 👇🏻 -->
@@ -2264,6 +2262,8 @@
       } else {
         $("div.reveal").append(header);
       }
+
+      Reveal.configure({ pdfSeparateFragments: false });
     </script>
 
     <!-- Hack to add header/footer: https://stackoverflow.com/a/37518822 👆🏻 -->
