@@ -73,6 +73,10 @@ code.nonu td.hljs-ln-line.hljs-ln-numbers {
   padding: 0;
 }
 
+.mcenter {
+  margin: auto;
+}
+
 #header-left {
   position: absolute;
   top: 1%;

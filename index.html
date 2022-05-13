@@ -1437,7 +1437,7 @@
 
         <section>
           <h3>
-            Pull Request
+            <span class="green">PR</span> · Pull Request
             <img
               style="width: 60px; margin: 0; vertical-align: top"
               src="img/github.svg"
@@ -1471,7 +1471,7 @@
 
         <section>
           <h3>
-            Merge Request
+            <span class="red">MR</span> · Merge Request
             <img
               style="width: 60px; margin: 0; vertical-align: top"
               src="img/gitlab.svg"
@@ -1517,14 +1517,15 @@
           <div class="blk-l60">
             <div class="s150">🧑🏻‍🔧</div>
             <pre>
-                  <code class="console" data-trim data-noescape>
-                    $ git switch -c colab
-                    $ # edit README.md
-                    $ git add .
-                    $ git commit -m "Help from outside"
-                    $ git push origin colab
-                  </code>
-                </pre>
+                <code class="console" data-trim data-noescape>
+                  $ # git clone ...
+                  $ git switch -c colab
+                  $ # edit README.md
+                  $ git add .
+                  $ git commit -m "Help from outside"
+                  $ git push origin colab
+                </code>
+              </pre>
           </div>
           <div class="blk-r40">
             <img class="fragment" src="img/colab-branch.png" />
@@ -1588,6 +1589,44 @@
               </code>
             </pre>
           </div>
+        </section>
+
+        <section>
+          <h3><span class="red">Revisando</span> PRs/MRs</h3>
+          <div class="s150">🧑🏻‍💼</div>
+          <div class="w60 mcenter">
+            <pre>
+                  <code class="console" data-trim data-noescape>
+                    $ # git clone ...
+                    $ git switch -c ext_help
+                    $ # edit README.md
+                    $ git add .
+                    $ git commit -m "New content"
+                    $ git push origin ext_help  # PR
+                  </code>
+                </pre>
+            <img class="fragment w50" src="img/pr-guido.png" />
+          </div>
+        </section>
+
+        <section>
+          <h3><span class="red">Revisando</span> PRs/MRs</h3>
+          <p class="s150">🙋🏻‍♀️</p>
+          <pre>
+            <code class="console nonu" data-trim data-noescape data-line-numbers="1|2-5|6|7-9|10|11">
+              $ git fetch origin pull/<span class="green">3</span>/head:<span class="green">check_help</span>
+              $ git branch -avv
+              ...
+              check_help  83282de  New content
+              ...
+              $ git switch check_help
+              $ # edit README.md
+              $ git add .
+              $ git commit -m "Fix minor issues"
+              $ git push origin check_help
+              $ # create PR
+            </code>
+          </pre>
         </section>
 
         <section>
