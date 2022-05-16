@@ -70,3 +70,15 @@ code.nonu {
 .mcenter {
   margin: auto;
 }
+
+.r-stack.items-top > * {
+  margin-top: 0;
+}
+
+.r-stack.items-top > div > :first-child {
+  margin-top: 0;
+}
+
+div.r-stack.wfull > div {
+  width: 100%;
+}

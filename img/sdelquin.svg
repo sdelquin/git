@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="938px" height="391px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-    <g transform="matrix(1,0,0,1,-491.395,-977.36)">
+<svg width="100%" height="100%" viewBox="0 0 897 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-511.698,-997.663)">
         <g id="Logo-sdelquin-plate" serif:id="Logo sdelquin plate" transform="matrix(1.21821,0,0,1.21821,-209.482,-258.312)">
             <g transform="matrix(0.807018,0,0,1,237.719,-119)">
                 <path d="M1351,1207.4C1351,1175.72 1319.13,1150 1279.87,1150L510.126,1150C470.871,1150 439,1175.72 439,1207.4L439,1379.6C439,1411.28 470.871,1437 510.126,1437L1279.87,1437C1319.13,1437 1351,1411.28 1351,1379.6L1351,1207.4Z" style="fill:rgb(64,64,64);"/>
-                <path d="M1371.65,1207.4C1371.65,1166.52 1330.53,1133.33 1279.87,1133.33L510.126,1133.33C459.472,1133.33 418.348,1166.52 418.348,1207.4L418.348,1379.6C418.348,1420.48 459.472,1453.67 510.126,1453.67C510.126,1453.67 1279.87,1453.67 1279.87,1453.67C1330.53,1453.67 1371.65,1420.48 1371.65,1379.6L1371.65,1207.4ZM1351,1207.4C1351,1175.72 1319.13,1150 1279.87,1150L510.126,1150C470.871,1150 439,1175.72 439,1207.4L439,1379.6C439,1411.28 470.871,1437 510.126,1437L1279.87,1437C1319.13,1437 1351,1411.28 1351,1379.6L1351,1207.4Z" style="fill:white;"/>
             </g>
             <g id="Logo-sdelquin" serif:id="Logo sdelquin" transform="matrix(1,0,0,1,66.1966,178.082)">
                 <g transform="matrix(0.44641,0,0,0.564868,-378.41,505.548)">

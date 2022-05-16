@@ -178,7 +178,10 @@
         </section>
 
         <section>
-          <h3>¿Por qué <span class="yellow">Git</span>?</h3>
+          <h3>
+            ¿Por qué <span class="yellow"><code>git</code></span
+            >?
+          </h3>
           <ul>
             <li>Histórico permanente de cambios.</li>
             <li>Copias de seguridad.</li>
@@ -498,14 +501,11 @@
         <section>
           <h3>Punto de partida</h3>
           <p>
-            ☁️
-            <a href="https://github.com/sdelquin/work.git"
-              >https://github.com/sdelquin/work.git</a
-            >
+            ☁️ <span class="yellow">https://github.com/sdelquin/work.git</span>
           </p>
           <pre>
             <code class="console nonu" data-trim data-noescape data-line-numbers="1|2|3-4">
-              $ git clone https://github.com/sdelquin/work.git
+              $ git clone git@github.com:sdelquin/work.git  # ssh
               $ cd work
               $ ls
               LICENSE   README.md
@@ -648,14 +648,14 @@
             <code>git <span class="red">commit</span></code>
           </h3>
           <pre>
-            <code class="console" data-trim data-noescape>
+            <code class="console nonu" data-trim data-noescape data-line-numbers="1">
               $ git commit -m "Add welcome message"
               [main ae0abb3] Add welcome message
               1 file changed, 1 insertion(+)
             </code>
           </pre>
           <pre class="fragment">
-            <code class="console nonu" data-trim data-noescape data-line-numbers="1|2|3-4|6">
+            <code class="console nonu" data-trim data-noescape data-line-numbers="1,3">
               $ git status
               On branch main
               Your branch is ahead of 'origin/main' by 1 commit.
@@ -664,6 +664,10 @@
               nothing to commit, working tree clean
             </code>
           </pre>
+          <p class="fragment s75">
+            ✳️ Si no se especifica la opción <code>-m</code> el comando pedirá
+            el mensaje de commit con un editor.
+          </p>
         </section>
 
         <section>
@@ -716,7 +720,7 @@
           </p>
           <div class="r-stack">
             <pre class="fragment fade-out" data-fragment-index="0">
-              <code class="console" data-trim data-noescape>
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1,5,8">
                 $ git status
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -736,7 +740,7 @@
                 </code>
               </pre>
               <pre>
-                <code class="console" data-trim data-noescape>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1">
                   $ git status
                   On branch main
                   Your branch is up to date with 'origin/main'.
@@ -758,7 +762,7 @@
           </p>
           <div class="r-stack">
             <pre class="fragment fade-out" data-fragment-index="0">
-              <code class="console" data-trim data-noescape>
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1,5,7">
                 $ git status
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -776,7 +780,7 @@
                 </code>
               </pre>
               <pre>
-                <code class="console" data-trim data-noescape>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1">
                   $ git status
                   On branch main
                   Your branch is up to date with 'origin/main'.
@@ -806,8 +810,9 @@
             <code>git <span class="red">clean</span></code>
           </h3>
           <div class="blk-l40">
+            <p>Escenario 🏖️</p>
             <pre>
-              <code class="console s80" data-trim data-noescape>
+              <code class="console s80 nonu" data-trim data-noescape data-line-numbers="1,5,7-8">
                 $ git status
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -822,6 +827,7 @@
             </pre>
           </div>
           <div class="blk-r60">
+            <p>Borrado 🗑️</p>
             <pre class="fragment">
               <code class="console s80" data-trim data-noescape>
                 $ <span class="yellow">git clean -i</span>
@@ -829,7 +835,7 @@
                   <span class="red">process.C  upload.C</span>
                 *** Commands ***
                   1: clean                2: filter by pattern
-                  3: select by numbers    4: ask each
+                  3: select by numbers    <span class="green">4: ask each</span>
                   5: quit                 6: help
                 <span class="yellow">What now> 4</span>
                 Remove process.C [y/N]? y
@@ -865,7 +871,7 @@
               <pre>
                 <code class="console" data-trim data-noescape>
                   $ git branch
-                  * main
+                  * <span class="green">main</span>
                 </code>
               </pre>
             </div>
@@ -878,7 +884,6 @@
               <pre>
                 <code class="console" data-trim data-noescape>
                   $ git branch -r
-                  origin/HEAD -> origin/main
                   origin/main
                 </code>
               </pre>
@@ -889,8 +894,7 @@
               <pre>
                 <code class="console" data-trim data-noescape>
                   $ git branch -a
-                  * main
-                  remotes/origin/HEAD -> origin/main
+                  * <span class="green">main</span>
                   remotes/origin/main
                 </code>
               </pre>
@@ -901,8 +905,7 @@
               <pre>
                 <code class="console" data-trim data-noescape>
                   $ git branch -avv
-                  * main                788a2d7 [origin/main] Initial commit
-                    remotes/origin/HEAD -> origin/main
+                  * <span class="green">main</span>                788a2d7 [origin/main] Initial commit
                     remotes/origin/main 788a2d7 Initial commit
                 </code>
               </pre>
@@ -936,7 +939,7 @@
           <div class="fragment blk-right">
             <p>Borrar ramas 🗑️</p>
             <pre>
-              <code class="console s90" data-trim data-noescape>
+              <code class="console s90 nonu" data-trim data-noescape data-line-numbers="1,3">
                 $ git branch -d dev
                 Deleted branch dev (was ae0abb3).
                 $ git branch -d feat
@@ -964,7 +967,7 @@
             <code>git <span class="red">remote</span></code>
           </h3>
           <pre>
-            <code class="console" data-trim data-noescape>
+            <code class="console nonu" data-trim data-noescape data-line-numbers="1">
               $ git remote -v
               origin	git@github.com:sdelquin/work.git (fetch)
               origin	git@github.com:sdelquin/work.git (push)
@@ -1028,7 +1031,7 @@
           <h3>
             <code>git <span class="red">switch</span></code>
           </h3>
-          <div class="r-stack f90">
+          <div class="r-stack wfull">
             <!-- Fragment -->
             <div class="fragment fade-out" data-fragment-index="0">
               <div class="blk-l30">
@@ -1053,7 +1056,7 @@
               </div>
               <div class="blk-r70">
                 <pre>
-                  <code class="console" data-trim data-noescape>
+                  <code class="console nonu" data-trim data-noescape data-line-numbers="1">
                     $ git switch -c blue
                     Switched to a new branch 'blue'
                   </code>
@@ -1074,7 +1077,7 @@
               </div>
               <div class="blk-r70">
                 <pre>
-                  <code class="console" data-trim data-noescape>
+                  <code class="console nonu" data-trim data-noescape data-line-numbers="1">
                     $ git switch -c red
                     Switched to a new branch 'red'
                   </code>
@@ -1096,26 +1099,19 @@
               </div>
               <div class="blk-r70">
                 <pre>
-                  <code class="console" data-trim data-noescape>
+                  <code class="console nonu" data-trim data-noescape data-line-numbers="1">
                     $ git switch main
                     Switched to a new branch 'main'
                   </code>
                 </pre>
                 <pre>
-                  <code class="console" data-trim data-noescape>
-                    $ git branch -d red
-                    Deleted branch red (was 6b70804).
+                  <code class="console nonu" data-trim data-noescape data-line-numbers="1">
+                    $ git switch -c blue
+                    Switched to a new branch 'blue'
                   </code>
                 </pre>
                 <pre>
-                  <code class="console" data-trim data-noescape>
-                    $ git status
-                      blue
-                    * <span class="green">main</span>
-                  </code>
-                </pre>
-                <pre>
-                  <code class="console" data-trim data-noescape>
+                  <code class="console nonu" data-trim data-noescape data-line-numbers="1">
                     $ git switch -c red
                     Switched to a new branch 'red'
                   </code>
@@ -1169,7 +1165,7 @@
 
         <section>
           <h3>
-            <code>git <span class="red">push</span> 1️⃣</code>
+            <code>git <span class="red">push</span> ✅</code>
           </h3>
           <div class="r-stack">
             <pre>
@@ -1196,28 +1192,31 @@
 
         <section>
           <h3>
-            <code>git <span class="red">push</span> 2️⃣</code>
+            <code>git <span class="red">push</span> ❌</code>
           </h3>
           <div class="r-stack">
             <div>
               <pre class="fragment semi-fade-out" data-fragment-index="0">
-                <code class="console" data-trim data-noescape>
+                <code class="console" data-trim data-noescape data-line-numbers="1">
                   $ git switch -c dev
                   Switched to a new branch 'dev'
-    
-                  $ git push
-                  fatal: The current branch dev has no upstream branch.
-                  To push the current branch and set the remote as upstream, use
-    
-                      git push --set-upstream origin dev
                 </code>
               </pre>
-              <p
-                class="fragment semi-fade-out current-visible s150"
+              <div
+                class="fragment semi-fade-out current-visible"
                 data-fragment-index="0"
               >
-                😨
-              </p>
+                <pre>
+                  <code class="console" data-trim data-noescape>
+                    $ git push
+                    <span class="red">fatal: The current branch dev has no upstream branch.</span>
+                    To push the current branch and set the remote as upstream, use
+      
+                        git push --set-upstream origin dev
+                  </code>
+                </pre>
+                <p class="s150">😨</p>
+              </div>
             </div>
             <pre class="fragment framed-red">
               <code class="console" data-trim data-noescape>
@@ -1231,12 +1230,12 @@
 
         <section>
           <h3>
-            <code>git <span class="red">push</span> 2️⃣</code>
+            <code>git <span class="red">push</span></code>
           </h3>
           <div class="r-stack">
-            <div>
+            <div class="w90">
               <pre>
-                <code class="console nonu fade-in-then-semi-out" data-trim data-noescape data-line-numbers="1|3-6|7-8|9">
+                <code class="console nonu fade-in-then-semi-out s85" data-trim data-noescape data-line-numbers="1|3-6|7-8|9">
                   $ git push -u origin dev
                   Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
                   remote:
@@ -1272,7 +1271,7 @@
 
         <section>
           <h3>
-            <code>git <span class="red">merge</span> 1️⃣</code>
+            <code>git <span class="red">merge</span> ✅</code>
           </h3>
           <div class="blk-l20">
             <img src="img/git-merge1.svg" />
@@ -1282,7 +1281,7 @@
               <code class="console nonu" data-trim data-noescape data-line-numbers="1|3-5|7|9-12">
                 $ git switch dev
                  
-                $ vi README.md  # modificación
+                $ # edit README.md
                 $ git add .
                 $ git commit -m "New notes"
                   
@@ -1299,37 +1298,45 @@
 
         <section>
           <h3>
-            <code>git <span class="red">merge</span> 2️⃣</code>
+            <code>git <span class="red">merge</span> ❌</code>
           </h3>
           <div class="blk-l20">
             <img src="img/git-merge2.svg" />
           </div>
-          <div class="blk-r80 fragment">
-            <pre>
-              <code class="s90 console nonu" data-trim data-noescape data-line-numbers="1-4|6-9|11-14">
+          <div class="blk-r80">
+            <pre class="fragment">
+              <code class="s90 console" data-trim data-noescape>
                 $ git switch dev
-                $ vi README.md  # modificación
+                $ # Editamos L2 de README.md: "Hola" 
                 $ git add .
                 $ git commit -m "Say hola"
-                 
-                $ git switch main
-                $ vi README.md  # modificación
-                $ git add .
-                $ git commit -m "Say hallo"
-                  
-                $ git merge dev --no-edit
-                Auto-merging README.md
-                <span class="red">CONFLICT</span> (content): Merge conflict in README.md
-                Automatic merge failed; fix conflicts and then commit the result.
               </code>
             </pre>
-            <p class="fragment s150">😱😱😱</p>
+            <pre class="fragment">
+              <code class="s90 console" data-trim data-noescape>
+                $ git switch main
+                $ # Editamos L2 de README.md: "Hallo" 
+                $ git add .
+                $ git commit -m "Say hallo"
+              </code>
+            </pre>
+            <div class="fragment">
+              <pre>
+                <code class="s90 console" data-trim data-noescape>
+                  $ git merge dev --no-edit
+                  Auto-merging README.md
+                  <span class="red">CONFLICT</span> (content): Merge conflict in README.md
+                  Automatic merge failed; fix conflicts and then commit the result.
+                </code>
+              </pre>
+              <p class="s150">😱😱😱</p>
+            </div>
           </div>
         </section>
 
         <section>
           <h3>
-            <code>git <span class="red">merge</span> 2️⃣</code>
+            <code>git <span class="red">merge</span></code>
           </h3>
           <p>Resolviendo el conflicto 🥊</p>
           <div class="blk-left">
@@ -1367,12 +1374,12 @@
 
         <section>
           <h3>
-            <code>git <span class="red">merge</span> 2️⃣</code>
+            <code>git <span class="red">merge</span></code>
           </h3>
           <p>Resolviendo el conflicto 🥊</p>
           <div class="r-stack">
             <pre class="fragment semi-fade-out" data-fragment-index="0">
-              <code class="console nonu" data-trim data-noescape data-line-numbers="1,10-12">
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1,6-7,10-12">
                 $ git status
                 On branch main
                 Your branch is ahead of 'origin/main' by 3 commits.
@@ -1513,29 +1520,52 @@
         </section>
 
         <section>
-          <h3><span class="red">/Colaborando/</span> mediante ramas</h3>
+          <h3>Formas de <span class="red">/colaborar/</span> en un repo</h3>
+          <ul class="animals">
+            <li class="fragment">
+              <span class="green">Con permisos</span> de escritura
+              <span class="green">$(\mathcal{A})$</span>
+              <ul class="tree">
+                <li><em>Miembros del equipo</em></li>
+              </ul>
+            </li>
+            <li class="fragment">
+              <span class="yellow">Sin permisos</span> de escritura
+              <span class="yellow">$(\mathcal{B})$</span>
+              <ul class="tree">
+                <li><em>Personal externo</em></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Colaborando <span class="green">$(\mathcal{A})$</span></h3>
           <div class="blk-l60">
-            <div class="s150">🧑🏻‍🔧</div>
+            <p>Colaborador 🧑🏻‍🔧</p>
             <pre>
                 <code class="console" data-trim data-noescape>
                   $ # git clone ...
                   $ git switch -c colab
                   $ # edit README.md
                   $ git add .
-                  $ git commit -m "Help from outside"
+                  $ git commit -m "Help from teammate"
                   $ git push origin colab
                 </code>
               </pre>
           </div>
           <div class="blk-r40">
-            <img class="fragment" src="img/colab-branch.png" />
+            <div class="fragment">
+              <p class="s85">¡Nueva rama remota!</p>
+              <img src="img/colab-branch.png" />
+            </div>
           </div>
         </section>
 
-        <section>
-          <h3><span class="red">/Colaborando/</span> mediante ramas</h3>
+        <section data-auto-animate>
+          <h3>Colaborando <span class="green">$(\mathcal{A})$</span></h3>
           <p class="s150">🙋🏻‍♀️</p>
-          <div class="r-stack f90">
+          <div class="r-stack wfull items-top">
             <pre class="fragment fade-out" data-fragment-index="0">
               <code class="console" data-trim data-noescape>
                 $ git branch -avv    
@@ -1565,25 +1595,28 @@
                 $ git branch -avv    
                   dev                   3149c76 [origin/dev] Work in progress
                 * <span class="green">main</span>                  7c3682f [origin/main] Add sum
-                  <span class="red">remotes/origin/colab</span>  46b7b56 Help from outside
+                  <span class="red">remotes/origin/colab</span>  46b7b56 Help from teammate
                   <span class="red">remotes/origin/dev</span>    3149c76 Work in progress
                   <span class="red">remotes/origin/main</span>   7c3682f Add sum
               </code>
             </pre>
-            <pre class="fragment fade-out current-visible">
-              <code class="console s90" data-trim data-noescape>
-                $ git switch colab
-                Branch 'colab' set up to track remote branch 'colab' from 'origin'.
-                Switched to a new branch 'colab'
-              </code>
-            </pre>
+            <div class="fragment fade-out current-visible">
+              <pre>
+                <code class="console s90 nonu" data-trim data-noescape data-line-numbers="1">
+                  $ git switch colab
+                  Branch 'colab' set up to track remote branch 'colab' from 'origin'.
+                  Switched to a new branch 'colab'
+                </code>
+              </pre>
+              <p class="s150">🪄</p>
+            </div>
             <pre class="fragment">
               <code class="console s95" data-trim data-noescape>
                 $ git branch -avv    
                 * <span class="green">colab</span>                 46b7b56 [origin/colab] Help from outside
                   dev                   3149c76 [origin/dev] Work in progress
                   main                  7c3682f [origin/main] Add sum
-                  <span class="red">remotes/origin/colab</span>  46b7b56 Help from outside
+                  <span class="red">remotes/origin/colab</span>  46b7b56 Help from teammate
                   <span class="red">remotes/origin/dev</span>    3149c76 Work in progress
                   <span class="red">remotes/origin/main</span>   7c3682f Add sum
               </code>
@@ -1591,42 +1624,134 @@
           </div>
         </section>
 
-        <section>
-          <h3><span class="red">Revisando</span> PRs/MRs</h3>
-          <div class="s150">🧑🏻‍💼</div>
-          <div class="w60 mcenter">
-            <pre>
+        <section data-auto-animate>
+          <h3>Colaborando <span class="yellow">$(\mathcal{B})$</span></h3>
+          <p>
+            Colaborador 👨🏻‍💼 $\Rightarrow$ <span class="red">Copia*</span> del
+            repo
+          </p>
+          <img class="w30 fragment" src="img/fork-button.png" />
+          <img class="w50 fragment" src="img/euribates-fork.png" />
+        </section>
+
+        <section data-auto-animate>
+          <h3>Colaborando <span class="yellow">$(\mathcal{B})$</span></h3>
+          <div class="r-stack">
+            <div class="w100 fragment fade-out" data-fragment-index="0">
+              <p class="s150">👨🏻‍💼</p>
+              <pre>
                   <code class="console" data-trim data-noescape>
-                    $ # git clone ...
-                    $ git switch -c ext_help
+                    $ git clone git@github.com:euribates/work.git
+                    $ git switch -c examples-proposal
                     $ # edit README.md
+                    $ # add examples.md
                     $ git add .
-                    $ git commit -m "New content"
-                    $ git push origin ext_help  # PR
+                    $ git commit -m "A new samples page"
+                    $ git push origin examples-proposal
+                    $ # Create PR
                   </code>
-                </pre>
-            <img class="fragment w50" src="img/pr-guido.png" />
+              </pre>
+            </div>
+            <img
+              class="fragment w75"
+              data-fragment-index="0"
+              src="img/pr-euribates.jpg"
+            />
           </div>
         </section>
 
-        <section>
-          <h3><span class="red">Revisando</span> PRs/MRs</h3>
+        <section data-auto-animate>
+          <h3>Colaborando <span class="yellow">$(\mathcal{B})$</span></h3>
           <p class="s150">🙋🏻‍♀️</p>
-          <pre>
-            <code class="console nonu" data-trim data-noescape data-line-numbers="1|2-5|6|7-9|10|11">
-              $ git fetch origin pull/<span class="green">3</span>/head:<span class="green">check_help</span>
-              $ git branch -avv
-              ...
-              check_help  83282de  New content
-              ...
-              $ git switch check_help
-              $ # edit README.md
-              $ git add .
-              $ git commit -m "Fix minor issues"
-              $ git push origin check_help
-              $ # create PR
-            </code>
-          </pre>
+          <div class="r-stack wfull items-top">
+            <pre class="fragment fade-out" data-fragment-index="0">
+              <code class="console" data-trim data-noescape>
+                $ git branch -avv    
+                  dev                 3149c76 [origin/dev] Work in progress
+                * <span class="green">main</span>                7c3682f [origin/main] Add sum
+                  <span class="red">remotes/origin/dev</span>  3149c76 Work in progress
+                  <span class="red">remotes/origin/main</span> 7c3682f Add sum
+              </code>
+            </pre>
+            <div
+              class="fragment fade-out current-visible"
+              data-fragment-index="0"
+            >
+              <pre>
+                <code class="console" data-trim data-noescape>
+                  $ git remote add <span class="red">euribates</span> <span class="green">git@github.com:euribates/work.git</span>
+                </code>
+              </pre>
+              <pre>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1">
+                  $ git remote -v
+                  <span class="yellow">euribates	git@github.com:euribates/work.git (fetch)</span>
+                  <span class="yellow">euribates	git@github.com:euribates/work.git (push)</span>
+                  origin	git@github.com:sdelquin/work.git (fetch)
+                  origin	git@github.com:sdelquin/work.git (push)
+                </code>
+              </pre>
+            </div>
+            <div class="fragment fade-out current-visible">
+              <pre>
+                <code class="console nonu s90" data-trim data-noescape data-line-numbers="1,4">
+                  $ git fetch euribates examples-proposal
+                  From github.com:euribates/work
+                  * branch            examples-proposal -> FETCH_HEAD
+                  * [new branch]      examples-proposal -> euribates/examples-proposal
+                </code>
+              </pre>
+              <pre>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1">
+                  $ git remote -v | grep euribates
+                  euribates/examples-proposal
+                </code>
+              </pre>
+            </div>
+            <div class="fragment fade-out current-visible">
+              <pre>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1,4">
+                  $ git switch examples-proposal
+                  Branch 'examples-proposal' set up to track remote branch
+                  'examples-proposal' from 'euribates'.
+                  Switched to a new branch 'examples-proposal'
+                </code>
+              </pre>
+              <pre>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1">
+                  $ git status
+                  On branch examples-proposal
+                  Your branch is up to date with 'euribates/examples-proposal'.
+
+                  nothing to commit, working tree clean
+                </code>
+              </pre>
+            </div>
+            <div class="fragment fade-out current-visible">
+              <pre>
+                <code class="console nonu" data-trim data-noescape>
+                  $ ls
+                  LICENSE     README.md   <span class="green">examples.md</span> sum.py
+                </code>
+              </pre>
+              <pre>
+                <code class="console nonu" data-trim data-noescape>
+                  $ # edit examples.md
+                  $ git add .
+                  $ git commit -m "PR checked"
+                </code>
+              </pre>
+              <pre>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1,3,4">
+                  $ git push
+                  # ...
+                  To github.com:euribates/work.git
+                    916c79c..48bfdf2  examples-proposal -> examples-proposal
+                </code>
+              </pre>
+            </div>
+            <img class="fragment w75" src="img/pr-euribates-add.jpg" />
+          </div>
         </section>
 
         <section>
