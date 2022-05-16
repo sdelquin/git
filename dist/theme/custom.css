@@ -534,6 +534,18 @@ div.r-stack.wfull > div {
   width: 100%;
 }
 
+img.w1 {
+  width: 9.6px;
+}
+img.w2 {
+  width: 19.2px;
+}
+img.w3 {
+  width: 28.8px;
+}
+img.w4 {
+  width: 38.4px;
+}
 img.w5 {
   width: 48px;
 }

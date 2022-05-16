@@ -556,12 +556,12 @@
           </pre>
         </section>
 
-        <section data-auto-animate>
+        <section>
           <h3>Estados de un archivo en <code>git</code></h3>
           <img class="w75" src="img/git-states.svg" />
         </section>
 
-        <section data-auto-animate>
+        <section>
           <h3>Estados de un archivo en <code>git</code></h3>
           <ul class="animals">
             <li class="fragment">
@@ -973,6 +973,10 @@
               origin	git@github.com:sdelquin/work.git (push)
             </code>
           </pre>
+          <p class="fragment s80">
+            <code class="yellow">origin</code> viene porque es el remoto desde
+            el que el repo se clonó <span class="yellow">origin</span>almente
+          </p>
         </section>
 
         <section data-auto-animate>
@@ -1031,7 +1035,7 @@
           <h3>
             <code>git <span class="red">switch</span></code>
           </h3>
-          <div class="r-stack wfull">
+          <div class="r-stack wfull items-top">
             <!-- Fragment -->
             <div class="fragment fade-out" data-fragment-index="0">
               <div class="blk-l30">
@@ -1146,7 +1150,7 @@
                   </code>
                 </pre>
               </div>
-              <div class="blk-full s50 ptop5">
+              <div class="blk-full s60 ptop5">
                 Fuente $\Rightarrow$
                 <a href="https://opensource.com/article/22/4/git-branches"
                   >https://opensource.com/article/22/4/git-branches</a
@@ -1194,7 +1198,7 @@
           <h3>
             <code>git <span class="red">push</span> ❌</code>
           </h3>
-          <div class="r-stack">
+          <div class="r-stack wfull">
             <div>
               <pre class="fragment semi-fade-out" data-fragment-index="0">
                 <code class="console" data-trim data-noescape data-line-numbers="1">
@@ -1232,10 +1236,10 @@
           <h3>
             <code>git <span class="red">push</span></code>
           </h3>
-          <div class="r-stack">
-            <div class="w90">
+          <div class="r-stack wfull">
+            <div>
               <pre>
-                <code class="console nonu fade-in-then-semi-out s85" data-trim data-noescape data-line-numbers="1|3-6|7-8|9">
+                <code class="console nonu fade-in-then-semi-out" data-trim data-noescape data-line-numbers="1|3-6|7-8|9">
                   $ git push -u origin dev
                   Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
                   remote:
@@ -1591,7 +1595,7 @@
               </code>
             </pre>
             <pre class="fragment fade-out current-visible">
-              <code class="console" data-trim data-noescape>
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1,4">
                 $ git branch -avv    
                   dev                   3149c76 [origin/dev] Work in progress
                 * <span class="green">main</span>                  7c3682f [origin/main] Add sum
@@ -1611,7 +1615,7 @@
               <p class="s150">🪄</p>
             </div>
             <pre class="fragment">
-              <code class="console s95" data-trim data-noescape>
+              <code class="console s95 nonu" data-trim data-noescape data-line-numbers="1,2">
                 $ git branch -avv    
                 * <span class="green">colab</span>                 46b7b56 [origin/colab] Help from outside
                   dev                   3149c76 [origin/dev] Work in progress
@@ -1683,7 +1687,7 @@
                 </code>
               </pre>
               <pre>
-                <code class="console nonu" data-trim data-noescape data-line-numbers="1">
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1-3">
                   $ git remote -v
                   <span class="yellow">euribates	git@github.com:euribates/work.git (fetch)</span>
                   <span class="yellow">euribates	git@github.com:euribates/work.git (push)</span>
@@ -1703,7 +1707,7 @@
               </pre>
               <pre>
                 <code class="console nonu" data-trim data-noescape data-line-numbers="1">
-                  $ git remote -v | grep euribates
+                  $ git branch -r | grep euribates
                   euribates/examples-proposal
                 </code>
               </pre>
@@ -1767,7 +1771,7 @@
           </h3>
           <div class="r-stack">
             <pre class="fragment fade-out" data-fragment-index="0">
-              <code class="console s80 nonu" data-trim data-noescape data-line-numbers="1,5,8,10,12">
+              <code class="console s85 nonu" data-trim data-noescape data-line-numbers="1,5,8,10,12">
                 $ git status
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -1786,7 +1790,7 @@
             </pre>
             <div class="fragment current-visible w100" data-fragment-index="0">
               <pre>
-                <code class="console" data-trim data-noescape>
+                <code class="console nonu" data-trim data-noescape data-line-numbers="1">
                   $ git stash -u
                   Saved working directory and index state WIP on main:
                   c18e3f7 Merge branch 'main' of github.com:sdelquin/work
@@ -1799,7 +1803,7 @@
               </pre>
             </div>
             <pre class="fragment fade-out current-visible">
-              <code class="console" data-trim data-noescape>
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1">
                 $ git status
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -1808,7 +1812,7 @@
               </code>
             </pre>
             <pre class="fragment">
-              <code class="console nonu s80" data-trim data-noescape data-line-numbers="1, 5,8,10,12">
+              <code class="console nonu s85" data-trim data-noescape data-line-numbers="1, 5,8,10,12">
                 $ git stash pop
                 On branch main
                 Your branch is up to date with 'origin/main'.
@@ -2047,13 +2051,24 @@
           <h3>
             Estructura
             <span class="yellow">/mínima/</span>
-            del repo
+            de un repo
           </h3>
           <ul class="check">
-            <li class="fragment"><code>README.md</code></li>
+            <li class="fragment">
+              <code>README.md</code>
+              <ul class="tree">
+                <li>
+                  <a href="https://github.com/jehna/readme-best-practices"
+                    >Best practices</a
+                  >
+                </li>
+              </ul>
+            </li>
             <!-- prettier-ignore -->
-            <li class="fragment"><code>LICENSE</code> $\Rightarrow$
-              <a href="https://www.gnu.org/licenses/agpl-3.0.txt">AGPL3</a>
+            <li class="fragment"><code>LICENSE</code>
+              <ul class="tree">
+                <li><a href="https://choosealicense.com/">choosealicense.com</a></li>
+              </ul>
             </li>
             <li class="fragment"><code>CHANGELOG</code></li>
             <li class="fragment"><code>.gitignore</code></li>
@@ -2135,7 +2150,7 @@
         </section>
 
         <section>
-          <h3>Lo que <span class="red">/no/</span> debería estar en el repo</h3>
+          <h3>Lo que <span class="red">/no/</span> debería estar en un repo</h3>
           <ul class="cross">
             <li class="fragment">
               Contraseñas o credenciales:
@@ -2173,21 +2188,12 @@
           <h3><span class="green">Buenas prácticas</span> en commits</h3>
           <ul>
             <!-- prettier-ignore -->
-            <li class="fragment">Commit
-              $
-              \begin{cases}
-                \text{Tarea general} \\
-                \text{Línea en blanco} \\
-                \text{Cambios aplicados}
-              \end{cases}
-              $
-            </li>
-            <li class="fragment">
-              No usar <span class="red">rutas absolutas</span>
-            </li>
+            <li class="fragment"><a href="https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716">Mensajes semánticos</a></li>
             <!-- prettier-ignore -->
             <li class="fragment">Mantener <span class="yellow">estado funcional</span> tras commit</li>
-            <li class="fragment">Commits atómicos</li>
+            <li class="fragment">
+              Commits <span class="strike">atómicos</span> pequeños
+            </li>
             <li class="fragment">Commits formato $\neq$ funcionalidad</li>
             <li class="fragment">🇺🇸 vs 🇪🇸</li>
             <li class="fragment">Etiquetado de versiones</li>
@@ -2210,78 +2216,6 @@
           </ul>
         </section>
 
-        <section data-auto-animate>
-          <h3>GitLab corporativo</h3>
-          <p class="green">ETL</p>
-          <pre class="clear">
-            <code class="console s90" data-trim data-noescape>
-              <span class="fragment red" data-fragment-index="0">📂 ETL Operacionales</span>
-                <span class="fragment" data-fragment-index="1">📂 080.010 Comercio <em class="green">(1)</em></span>
-                  <span class="fragment" data-fragment-index="2">📂 E30103A Indices de Comercio al por Menor <em class="green">(2)</em></span>
-                    <span class="fragment yellow" data-fragment-index="3">⭐ E30103A-MDS2MDS-PC0001-V0.1</span>
-              <span class="fragment red" data-fragment-index="4">📂 ETL Transversales</span>
-               <span class="fragment" data-fragment-index="5"> 📂 PROCESA Procesamiento de datos y análisis de resultados <em class="green">(3)</em></span>
-                 <span class="fragment" data-fragment-index="6"> 📂 GSBPM6.1.2 Ejecutar ajustes estacionales-efecto calendario <em class="green">(4)</em></span>
-                    <span class="fragment yellow" data-fragment-index="7">⭐ GSBPM6.1.2-PC0001-V0.1</span>
-            </code>
-          </pre>
-          <ol class="s50">
-            <li class="fragment" data-fragment-index="1">
-              <a
-                href="https://www3.gobiernodecanarias.org/aplicaciones/operacionesistac/"
-                >Tema de operación estadística (ISTAC)</a
-              >
-            </li>
-            <li class="fragment" data-fragment-index="2">
-              <a
-                href="https://www3.gobiernodecanarias.org/aplicaciones/operacionesistac/"
-                >Operación estadística (ISTAC)</a
-              >
-            </li>
-            <li class="fragment" data-fragment-index="5">
-              <a
-                href="https://estadisticas.arte-consultores.com/wiki/wiki/qdatos/view/Main/Documentaci%C3%B3n%20aprobada/Marco%20com%C3%BAn%20de%20procesos%20estad%C3%ADsticos/Procesos/Fichas%20de%20procesos/"
-                >Proceso clave en el modelo de calidad (ISTAC)</a
-              >
-            </li>
-            <li class="fragment" data-fragment-index="6">
-              <a href="https://www.ine.es/clasifi/estandar_procesos.pdf"
-                >Proceso de producción de operaciones estadísticas (INE)</a
-              >
-            </li>
-          </ol>
-        </section>
-
-        <section data-auto-animate>
-          <h3>GitLab corporativo</h3>
-          <p class="green">Software</p>
-          <pre class="clear">
-            <code class="console" data-trim data-noescape>
-              <span class="fragment" data-fragment-index="0">📂 Sistema de gestión de ETL</span>
-                <span class="fragment yellow" data-fragment-index="1">⭐ coetl</span>
-                <span class="fragment yellow" data-fragment-index="1">⭐ ETL Launcher</span>
-            </code>
-          </pre>
-        </section>
-
-        <section data-auto-animate>
-          <h3>GitLab corporativo</h3>
-          <p class="green">URL</p>
-          <pre class="clear">
-            <code class="console" data-trim data-noescape>
-              <span class="fragment">https://www.gobiernodecanarias.net</span>
-                <span class="fragment"><span class="red">└─</span> /aplicaciones/git/istac/</span>
-                  <span class="fragment"><span class="red">└─</span> /etl/operacionales/080.010-comercio/e30103a/</span>
-                    <span class="fragment"><span class="red">└─</span> e30103a-mds2mds-pc0001-v0.1</span>
-            </code>
-          </pre>
-          <a
-            class="fragment r-fit-text"
-            href="https://www.gobiernodecanarias.net/aplicaciones/git/istac/etl/operacionales/080.010-comercio/e30103a/e30103a-mds2mds-pc0001-v0.1"
-            >https://www.gobiernodecanarias.net/aplicaciones/git/istac/etl/operacionales/080.010-comercio/e30103a/e30103a-mds2mds-pc0001-v0.1</a
-          >
-        </section>
-
         <section>
           <h3>Referencias 🧐</h3>
           <ul>
@@ -2295,9 +2229,8 @@
               <a href="https://gitexplorer.com/">Git Command Explorer</a>
             </li>
             <li class="fragment">
-              <a
-                href="https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716"
-                >Semantic Commit Messages</a
+              <a href="https://learngitbranching.js.org/"
+                >Aprende Git Branching</a
               >
             </li>
             <li class="fragment">
@@ -2330,6 +2263,12 @@
             Powered by
             <a href="https://revealjs.com/"
               ><img class="vmiddle w15" src="img/reveal.svg"
+            /></a>
+          </p>
+          <p class="s50">
+            Fork me on
+            <a href="https://github.com/sdelquin/git"
+              ><img class="vmiddle w3" src="img/github.svg"
             /></a>
           </p>
         </section>

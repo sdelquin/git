@@ -229,6 +229,18 @@
 }
 
 img {
+  &.w1 {
+    width: 0.01 * $total-width;
+  }
+  &.w2 {
+    width: 0.02 * $total-width;
+  }
+  &.w3 {
+    width: 0.03 * $total-width;
+  }
+  &.w4 {
+    width: 0.04 * $total-width;
+  }
   &.w5 {
     width: 0.05 * $total-width;
   }
