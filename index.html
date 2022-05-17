@@ -1847,7 +1847,7 @@
           <div class="r-stack">
             <pre class="fragment fade-out" data-fragment-index="0">
               <code class="console" data-trim data-noescape>
-                $ git log --pretty=oneline --abbrev-commit
+                $ git log --oneline
                 <span class="yellow">c18e3f7</span> (HEAD -> main) Merge branch 'main' of github.com:sdelquin/work
                 <span class="yellow">1705ee9</span> (origin/main) Merge pull request #2 from sdelquin/dev
                 <span class="yellow">3149c76</span> (origin/dev, dev) Work in progress
@@ -1949,6 +1949,56 @@
                 href="https://levelup.gitconnected.com/what-is-git-diff-and-how-do-we-read-the-output-69f5b2036186"
                 >What is Git Diff and How Do We Read the Output?</a
               >
+            </div>
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <h3>
+            <code>git <span class="red">diff</span></code>
+          </h3>
+          <p><span class="green">/Back/</span> to the future! 👩🏻‍🚀</p>
+          <div class="blk-left">
+            <pre>
+              <code class="console nonu" data-trim data-noescape data-line-numbers="1,3,6">
+                $ git log --oneline
+                ...
+                <span class="green">24c1201</span> Say hallo
+                66c4e10 Say hola
+                aa94f74 Merge branch 'dev'
+                <span class="red">8f1e81f</span> New notes
+                ...
+              </code>
+            </pre>
+          </div>
+          <div class="blk-right">
+            <div class="fragment">
+              <p class="s90">24c1201 <span class="yellow">$vs$</span> HEAD</p>
+              <pre>
+                <code class="console" data-trim data-noescape>
+                  $ git diff <span class="green">24c1201</span>
+                </code>
+              </pre>
+            </div>
+            <div class="fragment">
+              <p class="s90">
+                8f1e81f <span class="yellow">$vs$</span> HEAD (file)
+              </p>
+              <pre>
+                <code class="console" data-trim data-noescape>
+                  $ git diff <span class="red">8f1e81f</span> README.md
+                </code>
+              </pre>
+            </div>
+            <div class="fragment">
+              <p class="s90">
+                24c1201 <span class="yellow">$vs$</span> 8f1e81f
+              </p>
+              <pre>
+                <code class="console" data-trim data-noescape>
+                  $ git diff <span class="green">24c1201</span> <span class="red">8f1e81f</span>
+                </code>
+              </pre>
             </div>
           </div>
         </section>
