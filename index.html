@@ -231,9 +231,7 @@
             </code>
           </pre>
           <div class="fragment">
-            <p>
-              👇🏻 Crea un archivo en <code class="red">$HOME/.gitconfig</code>
-            </p>
+            <p>👇🏻 Crea un archivo en <code class="red">~/.gitconfig</code></p>
             <pre>
               <code class="ini" data-trim data-noescape>
                 [user]
@@ -242,6 +240,31 @@
               </code>
             </pre>
           </div>
+        </section>
+
+        <section>
+          <h3>Establecer rama por defecto</h3>
+          <pre>
+            <code class="console" data-trim data-noescape>
+              $ git config --global init.defaultBranch <span class="green">main</span>
+            </code>
+          </pre>
+          <div class="fragment">
+            <p>👇🏻 Añade a <code class="red">~/.gitconfig</code></p>
+            <pre>
+              <code class="ini" data-trim data-noescape>
+                [init]
+                  defaultBranch = main
+              </code>
+            </pre>
+          </div>
+          <p class="fragment s70 ptop10">
+            ☁️
+            <a
+              href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main"
+              >Why GitHub renamed its master branch to main</a
+            >
+          </p>
         </section>
 
         <section>
@@ -666,8 +689,26 @@
           </pre>
           <p class="fragment s75">
             ✳️ Si no se especifica la opción <code>-m</code> el comando pedirá
-            el mensaje de commit con un editor.
+            el mensaje de commit con un editor $\Rightarrow$
+            <code>$EDITOR</code>
           </p>
+        </section>
+
+        <section>
+          <h3>Too Fast</h3>
+          <p class="r-fit-text">
+            ⚡
+            <code
+              >git <span class="red">commit</span>
+              <span class="green">-am</span> "Fast"</code
+            >
+          </p>
+          <ul class="fragment">
+            <li>
+              El parámetro <code>-a</code> lleva implícito <code>git add</code>
+            </li>
+            <li>Sólo funciona en ficheros con seguimiento</li>
+          </ul>
         </section>
 
         <section>
