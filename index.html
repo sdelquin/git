@@ -2005,6 +2005,11 @@
                 href="https://levelup.gitconnected.com/what-is-git-diff-and-how-do-we-read-the-output-69f5b2036186"
                 >What is Git Diff and How Do We Read the Output?</a
               >
+              <br />
+              ☁️
+              <a href="https://unix.stackexchange.com/a/450488"
+                >Posix file permissions 100644?</a
+              >
             </div>
           </div>
         </section>
@@ -2028,7 +2033,7 @@
           </div>
           <div class="blk-right">
             <div class="fragment">
-              <p class="s90">24c1201 <span class="yellow">$vs$</span> HEAD</p>
+              <p class="s80">24c1201 <span class="yellow">$vs$</span> HEAD</p>
               <pre>
                 <code class="console" data-trim data-noescape>
                   $ git diff <span class="green">24c1201</span>
@@ -2036,7 +2041,7 @@
               </pre>
             </div>
             <div class="fragment">
-              <p class="s90">
+              <p class="s80">
                 8f1e81f <span class="yellow">$vs$</span> HEAD (file)
               </p>
               <pre>
@@ -2046,12 +2051,22 @@
               </pre>
             </div>
             <div class="fragment">
-              <p class="s90">
+              <p class="s80">
                 24c1201 <span class="yellow">$vs$</span> 8f1e81f
               </p>
               <pre>
                 <code class="console" data-trim data-noescape>
                   $ git diff <span class="green">24c1201</span> <span class="red">8f1e81f</span>
+                </code>
+              </pre>
+            </div>
+            <div class="fragment">
+              <p class="s80">
+                24c1201 <span class="yellow">$vs$</span> 8f1e81f (file)
+              </p>
+              <pre>
+                <code class="console s80" data-trim data-noescape>
+                  $ git diff <span class="green">24c1201</span> <span class="red">8f1e81f</span> README.md
                 </code>
               </pre>
             </div>
@@ -2069,27 +2084,35 @@
           <h3>
             <code>git <span class="red">checkout</span></code>
           </h3>
-          <p><span class="green">/Back/</span> to the future! 👩🏻‍🚀</p>
-          <div class="blk-l30">
-            <img src="img/git-checkout.svg" />
-          </div>
-          <div class="blk-r70">
-            <pre class="fragment fade-in-then-semi-out">
-              <code class="console" data-trim data-noescape>
-                $ <span class="yellow">git checkout</span> <span class="red">24c1201</span>
-                Note: switching to '24c1201'.
-                ...
-                ...
-                HEAD is now at 24c1201 Say hallo
-              </code>
-            </pre>
-            <pre class="fragment">
-              <code class="console s90" data-trim data-noescape>
-                $ <span class="green">git checkout -</span>
-                Previous HEAD position was 24c1201 Say hallo
-                Switched to branch 'main'
-              </code>
-            </pre>
+          <div class="r-stack">
+            <div class="blk-full">
+              <p><span class="green">/Back/</span> to the future! 👩🏻‍🚀</p>
+              <div class="blk-l30">
+                <img src="img/git-checkout.svg" />
+              </div>
+              <div class="blk-r70">
+                <pre class="fragment fade-in-then-semi-out">
+                  <code class="console" data-trim data-noescape>
+                    $ <span class="yellow">git checkout</span> <span class="red">24c1201</span>
+                    Note: switching to '24c1201'.
+                    ...
+                    ...
+                    HEAD is now at 24c1201 Say hallo
+                  </code>
+                </pre>
+                <pre class="fragment fade-in-then-semi-out">
+                  <code class="console s90" data-trim data-noescape>
+                    $ <span class="green">git checkout -</span>
+                    Previous HEAD position was 24c1201 Say hallo
+                    Switched to branch 'main'
+                  </code>
+                </pre>
+                <p class="fragment fade-in-then-semi-out s70 ptop5">
+                  ⚠️ Cuidado con /reescribir/ la historia
+                </p>
+              </div>
+            </div>
+            <img class="top framed fragment" src="img/bttf.gif" />
           </div>
         </section>
 
@@ -2127,8 +2150,14 @@
                 1.0.0
               </code>
             </pre>
-            <p class="fragment">
+            <p class="fragment s80 ptop5">
               ☁️ <a href="https://semver.org/lang/es/">Versionado semántico</a>
+              <br />
+              💫
+              <a
+                href="https://docs.github.com/es/repositories/releasing-projects-on-github/managing-releases-in-a-repository"
+                >Managing releases on GitHub</a
+              >
             </p>
           </div>
         </section>
