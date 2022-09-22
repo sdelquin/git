@@ -1202,6 +1202,21 @@
         </section>
 
         <section>
+          <p class="r-fit-text">
+            ⚡
+            <code
+              >git <span class="red">switch</span>
+              <span class="green">-</span></code
+            >
+          </p>
+          <p class="fragment">
+            🔄 Usando
+            <span class="green"><code>"-"</code></span> volvemos a la rama
+            anterior
+          </p>
+        </section>
+
+        <section>
           <div class="r-fit-text">
             <code><span class="yellow">git</span> push</code>
           </div>
@@ -1998,7 +2013,6 @@
           <h3>
             <code>git <span class="red">diff</span></code>
           </h3>
-          <p><span class="green">/Back/</span> to the future! 👩🏻‍🚀</p>
           <div class="blk-left">
             <pre>
               <code class="console nonu" data-trim data-noescape data-line-numbers="1,3,6">
@@ -2041,6 +2055,41 @@
                 </code>
               </pre>
             </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="r-fit-text">
+            <code><span class="yellow">git</span> checkout</code>
+          </div>
+          <p class="green">Recuperando versiones</p>
+        </section>
+
+        <section data-auto-animate>
+          <h3>
+            <code>git <span class="red">checkout</span></code>
+          </h3>
+          <p><span class="green">/Back/</span> to the future! 👩🏻‍🚀</p>
+          <div class="blk-l30">
+            <img src="img/git-checkout.svg" />
+          </div>
+          <div class="blk-r70">
+            <pre class="fragment fade-in-then-semi-out">
+              <code class="console" data-trim data-noescape>
+                $ <span class="yellow">git checkout</span> <span class="red">24c1201</span>
+                Note: switching to '24c1201'.
+                ...
+                ...
+                HEAD is now at 24c1201 Say hallo
+              </code>
+            </pre>
+            <pre class="fragment">
+              <code class="console s90" data-trim data-noescape>
+                $ <span class="green">git checkout -</span>
+                Previous HEAD position was 24c1201 Say hallo
+                Switched to branch 'main'
+              </code>
+            </pre>
           </div>
         </section>
 
